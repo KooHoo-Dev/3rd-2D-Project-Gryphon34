@@ -1,8 +1,8 @@
 using Study.Utilities;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CommandSystem : MonoBehaviour
 {
@@ -42,15 +42,24 @@ public class CommandSystem : MonoBehaviour
     }
 
     private int count = 0;
+    private bool IsCorrect = false;
 
     private Arrow[] arrows = new Arrow[4];
 
-    private List<SpawnType> spawnType = new List<SpawnType>();
+    private SpawnType spawnType;
     private List<Arrow> commandList = new List<Arrow>();
     private List<Arrow> InputCommand = new List<Arrow>();
+    private List<Image> spawnedArrowImages = new List<Image>();
 
-    public GameObject cubePre;
+    private GameObject spawn;
+    public GameObject trianglePre;
+    public GameObject circlePre;
+    public GameObject squarePre;
+    public GameObject supportPre;
 
+    public GameObject[] arrowPre;
+
+    public Transform arrowUI;
     private void Awake()
     {
         arrows[0] = Arrow.Up;
@@ -61,16 +70,40 @@ public class CommandSystem : MonoBehaviour
 
     private void Update()
     {
-        if (commandList.Count>0) 
+        if (commandList.Count > 0 && IsCorrect == false)
         {
             PlayerCommand();
-            
+        }
+
+        if (IsCorrect)
+        {
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                spawnedArrowImages.Clear();
+                SetSpawnPosition();
+                IsCorrect = false;
+            }
         }
     }
 
     public void OnTriangleClick()
     {
         InitialCommand(SpawnType.Triangle);
+    }
+
+    public void OnCircleClick()
+    {
+        InitialCommand(SpawnType.Circle);
+    }
+
+    public void OnSquareClick()
+    {
+        InitialCommand(SpawnType.Square);
+    }
+
+    public void OnSupportClick()
+    {
+        InitialCommand(SpawnType.Support);
     }
 
     private void PlayerCommand()
@@ -101,10 +134,12 @@ public class CommandSystem : MonoBehaviour
     {
         if (commandList[count] == InputCommand[count])
         {
+            spawnedArrowImages[count].color = Color.green;
             count++;
-            if(count == commandList.Count)
+            if (count == commandList.Count)
             {
                 Debug.Log("성공");
+                IsCorrect = true;
                 count = 0;
             }
         }
@@ -114,6 +149,12 @@ public class CommandSystem : MonoBehaviour
             commandList.Clear();
             InputCommand.Clear();
             count = 0;
+
+            foreach (Transform child in arrowUI)
+            {
+                Destroy(child.gameObject);
+            }
+            spawnedArrowImages.Clear();
         }
     }
 
@@ -122,21 +163,65 @@ public class CommandSystem : MonoBehaviour
         commandList.Clear();
         InputCommand.Clear();
         count = 0;
+        spawnType = type;
 
-        for(int i = 0; i < (int)type; ++i)
+        for (int i = 0; i < (int)type; ++i)
         {
             int randNum = Random.Range(0, 4);
             commandList.Add(arrows[randNum]);
         }
+        DrawCommad();
         Debug.Log($"{string.Join(",", commandList)}");
     }
 
-    private void SetSpawnPosition(Vector3 spawnPos)
+    private void SetSpawnPosition()
     {
-        // 마우스가 클릭한 곳에 cubePre 소환
-        GameObject.Instantiate(cubePre,spawnPos,Quaternion.identity);
+        Vector2 mousePosition = SimpleInput.GetMousePosition();
+
+        // 화면 좌표계에서 World(Scene)의 좌표계로 전환합니다.
+        // 전환 할 때는 Camera의 기능을 이용합니다.
+
+        Vector3 worldMousePoint = Camera.main.ScreenToWorldPoint(mousePosition);
+        worldMousePoint.z = transform.position.z; // z값을 보정
+                                                  // 마우스가 클릭한 곳에 소환
+        
+        switch (spawnType)
+        {
+            case SpawnType.Triangle:
+                spawn = trianglePre;
+                break;
+            case SpawnType.Circle:
+                spawn = circlePre;
+                break;
+            case SpawnType.Square:
+                spawn = squarePre;
+                break;
+            case SpawnType.Support:
+                spawn = supportPre;
+                break;
+        }
+        GameObject.Instantiate(spawn, worldMousePoint, Quaternion.identity);
 
         commandList.Clear();
         InputCommand.Clear();
     }
+
+    private void DrawCommad()
+    {
+        foreach (Transform child in arrowUI)
+        {
+            Destroy(child.gameObject);
+        }
+
+        spawnedArrowImages.Clear();
+
+        for (int i = 0; i < commandList.Count; ++i)
+        {
+            int Index = (int)commandList[i];
+
+            GameObject newArrow = GameObject.Instantiate(arrowPre[Index], arrowUI, false);
+            spawnedArrowImages.Add(newArrow.GetComponent<Image>());
+        }
+    }
+
 }
