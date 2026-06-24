@@ -1,0 +1,2300 @@
+fileFormatVersion: 2
+guid: a6e36150589d6124e85e743eb7e70b60
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -859971721204628990
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_0
+  - first:
+      213: -5687860127584741922
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_1
+  - first:
+      213: 812218685950840011
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_2
+  - first:
+      213: -6072766031951917308
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_3
+  - first:
+      213: 411864917846090077
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_4
+  - first:
+      213: 7892287957211839341
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_5
+  - first:
+      213: -622144449123084408
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_6
+  - first:
+      213: -6003034713817064378
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_7
+  - first:
+      213: 8155292820348220362
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_8
+  - first:
+      213: -5951022629924263461
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_9
+  - first:
+      213: 2036043677137494315
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_10
+  - first:
+      213: -3055365356423437207
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_11
+  - first:
+      213: 2039042907492977572
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_12
+  - first:
+      213: -8364077452377910584
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_13
+  - first:
+      213: -8014466557281905055
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_14
+  - first:
+      213: 84581742388866915
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_15
+  - first:
+      213: -5016895919860583097
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_16
+  - first:
+      213: 3755095978206936712
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_17
+  - first:
+      213: -845000306146023669
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_18
+  - first:
+      213: 4327184487714876620
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_19
+  - first:
+      213: -4133767949651791443
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_20
+  - first:
+      213: -5577310025693080349
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_21
+  - first:
+      213: 1204320274405323962
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_22
+  - first:
+      213: 3662470251329751011
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_23
+  - first:
+      213: -1474284367633153152
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_24
+  - first:
+      213: -5815640739017394482
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_25
+  - first:
+      213: -2924335612380621465
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_26
+  - first:
+      213: 4591291187426132242
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_27
+  - first:
+      213: 1679658137309988238
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_28
+  - first:
+      213: -8592876769811161480
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_29
+  - first:
+      213: 8757480602714768991
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_30
+  - first:
+      213: 7649679685524724734
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_31
+  - first:
+      213: -4702751972295654526
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_32
+  - first:
+      213: 357667627544239641
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_33
+  - first:
+      213: -2414776133960581173
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_34
+  - first:
+      213: 6998081795174292765
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_35
+  - first:
+      213: -784699103818597305
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_36
+  - first:
+      213: -2849217294601023361
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_37
+  - first:
+      213: -4750345912042899642
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_38
+  - first:
+      213: 6145245311269885901
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_39
+  - first:
+      213: 8013546411781239740
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_40
+  - first:
+      213: -7029123927151783573
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_41
+  - first:
+      213: 3573879408761953762
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_42
+  - first:
+      213: -426085931967122669
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_43
+  - first:
+      213: 8374049197847098944
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_44
+  - first:
+      213: -8685121766786507846
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_45
+  - first:
+      213: 271939227976631845
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_46
+  - first:
+      213: -5227090487556191677
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_47
+  - first:
+      213: 8150310709276333561
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_48
+  - first:
+      213: -8358411125123163111
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_49
+  - first:
+      213: 4632476471301798217
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_50
+  - first:
+      213: -4776569467267950249
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_51
+  - first:
+      213: -2655037783515538281
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_52
+  - first:
+      213: -43022517819895040
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_53
+  - first:
+      213: -2581945046485456501
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_54
+  - first:
+      213: -1802070021493561191
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_55
+  - first:
+      213: -2383519820895256601
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_56
+  - first:
+      213: 2335541798564005606
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_57
+  - first:
+      213: 4941480490020081032
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_58
+  - first:
+      213: -3439407781872274545
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_59
+  - first:
+      213: 8145261519707271664
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_60
+  - first:
+      213: 3598252942674174937
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_61
+  - first:
+      213: -6143458143910213900
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_62
+  - first:
+      213: -39066795946668525
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_63
+  - first:
+      213: -7405760061850554935
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_64
+  - first:
+      213: -2174173595109705182
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_65
+  - first:
+      213: 784654903858968510
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_66
+  - first:
+      213: 2550466216692064288
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_67
+  - first:
+      213: -838330012607516912
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_68
+  - first:
+      213: -2293267466727339181
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_69
+  - first:
+      213: -5633352017226156263
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_70
+  - first:
+      213: -4257570105357221380
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_71
+  - first:
+      213: -8547716305342623724
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_72
+  - first:
+      213: 2678811623441934591
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_73
+  - first:
+      213: 7015406579551969183
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_74
+  - first:
+      213: -3530725582721612307
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_75
+  - first:
+      213: 7499277930287742773
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_76
+  - first:
+      213: -3415593085102704853
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_77
+  - first:
+      213: -7322554240372810564
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_78
+  - first:
+      213: 4191305104936658010
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_79
+  - first:
+      213: 4733330933433336190
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_80
+  - first:
+      213: -177003156496145096
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_81
+  - first:
+      213: -2535377462539538370
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_82
+  - first:
+      213: -138731657153436546
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_83
+  - first:
+      213: 1371001961010663208
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_84
+  - first:
+      213: -7456834527778624814
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_85
+  - first:
+      213: -6958333558646639847
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_86
+  - first:
+      213: 8012066479351826446
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_87
+  - first:
+      213: -1023163955517548181
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_88
+  - first:
+      213: -7152175911959695043
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_89
+  - first:
+      213: 3610876819071356912
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_90
+  - first:
+      213: -8332067320400438586
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_91
+  - first:
+      213: 4803643726095685044
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_92
+  - first:
+      213: -5640534465486411738
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_93
+  - first:
+      213: 8042059697335349260
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_94
+  - first:
+      213: -4829792803591987779
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_95
+  - first:
+      213: 1509099492401987089
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_96
+  - first:
+      213: 1907657901634920693
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_97
+  - first:
+      213: 2557122597777620579
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_98
+  - first:
+      213: 8193334262026214191
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_99
+  - first:
+      213: -5756862927283867343
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_100
+  - first:
+      213: 5056463676927534615
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_101
+  - first:
+      213: -6234346015555886997
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_102
+  - first:
+      213: 4497483504394009083
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_103
+  - first:
+      213: -7875120995606739790
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_104
+  - first:
+      213: -8410958186477647661
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_105
+  - first:
+      213: -4936968677005260348
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_106
+  - first:
+      213: -5769709304634655294
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_107
+  - first:
+      213: -8761630592852240976
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_108
+  - first:
+      213: -5750074643269692558
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_109
+  - first:
+      213: -1235307176833250777
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_110
+  - first:
+      213: 4825604554666500301
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_111
+  - first:
+      213: -6258007911845530031
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_112
+  - first:
+      213: -1629499343702972431
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_113
+  - first:
+      213: -8082285365665465621
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_114
+  - first:
+      213: 4232586647247165203
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_115
+  - first:
+      213: -3472675912468687407
+    second: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_116
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20287b0a644c014f0800000000000000
+      internalID: -859971721204628990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5143b7959a011b0800000000000000
+      internalID: -5687860127584741922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccc8007794954b00800000000000000
+      internalID: 812218685950840011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f8275087339bba0800000000000000
+      internalID: -6072766031951917308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5169abe5fc37b500800000000000000
+      internalID: 411864917846090077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b74baf41a078d60800000000000000
+      internalID: 7892287957211839341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88799077be2bd57f0800000000000000
+      internalID: -622144449123084408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c5894bbbfe0bca0800000000000000
+      internalID: -6003034713817064378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3362c8c9b6d2170800000000000000
+      internalID: 8155292820348220362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9ad0da278b96da0800000000000000
+      internalID: -5951022629924263461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21e5fadfea714c10800000000000000
+      internalID: 2036043677137494315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964a85775692995d0800000000000000
+      internalID: -3055365356423437207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab06e698b22c4c10800000000000000
+      internalID: 2039042907492977572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_13
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c219213fd3dceb80800000000000000
+      internalID: -8364077452377910584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166d6fce025e6c090800000000000000
+      internalID: -8014466557281905055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f629585ae7c2100800000000000000
+      internalID: 84581742388866915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7457a95ddb7606ab0800000000000000
+      internalID: -5016895919860583097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_17
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88eb58695e7cc1430800000000000000
+      internalID: 3755095978206936712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07e115d2b4f544f0800000000000000
+      internalID: -845000306146023669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_19
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 152
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc63db7d5f3d0c30800000000000000
+      internalID: 4327184487714876620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da13c1193f7e1a6c0800000000000000
+      internalID: -4133767949651791443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4d65cd41a6992b0800000000000000
+      internalID: -5577310025693080349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4fab7a8ea96b010800000000000000
+      internalID: 1204320274405323962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e702faf945b3d230800000000000000
+      internalID: 3662470251329751011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0838051cd2a4a8be0800000000000000
+      internalID: -1474284367633153152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6f3997f81ba4fa0800000000000000
+      internalID: -5815640739017394482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_26
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765570c114caa67d0800000000000000
+      internalID: -2924335612380621465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2118aee520b87bf30800000000000000
+      internalID: 4591291187426132242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85c47a3d285f4710800000000000000
+      internalID: 1679658137309988238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_29
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e13b8da18ffb880800000000000000
+      internalID: -8592876769811161480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5600348532d88970800000000000000
+      internalID: 8757480602714768991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb193de42f192a60800000000000000
+      internalID: 7649679685524724734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283cc885ff77cbeb0800000000000000
+      internalID: -4702751972295654526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_33
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e5e6fefc0b6f400800000000000000
+      internalID: 357667627544239641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf303376edfc7ed0800000000000000
+      internalID: -2414776133960581173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_35
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ddd76b05e2e1160800000000000000
+      internalID: 6998081795174292765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_36
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c335592503c15f0800000000000000
+      internalID: -784699103818597305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_37
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70186367fb8578d0800000000000000
+      internalID: -2849217294601023361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_38
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 104
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6473478bf81631eb0800000000000000
+      internalID: -4750345912042899642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc750eb3d0c484550800000000000000
+      internalID: 6145245311269885901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_40
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3b3510106d53f60800000000000000
+      internalID: 8013546411781239740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b615be7b709837e90800000000000000
+      internalID: -7029123927151783573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_42
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edd6551368f89130800000000000000
+      internalID: 3573879408761953762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313fe453a1d361af0800000000000000
+      internalID: -426085931967122669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_44
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0463259b069963470800000000000000
+      internalID: 8374049197847098944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_45
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb5da3d4cf387780800000000000000
+      internalID: -8685121766786507846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_46
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5268a0c794f16c300800000000000000
+      internalID: 271939227976631845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ac36855e4a577b0800000000000000
+      internalID: -5227090487556191677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f55a7b6868bb1170800000000000000
+      internalID: 8150310709276333561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_49
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c5c50dd55f00c80800000000000000
+      internalID: -8358411125123163111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_50
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9497c468eccd94040800000000000000
+      internalID: 4632476471301798217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759548a706736bdb0800000000000000
+      internalID: -4776569467267950249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_52
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cd050f339672bd0800000000000000
+      internalID: -2655037783515538281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_53
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003900c7f37276ff0800000000000000
+      internalID: -43022517819895040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_54
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89a7a2f8a61b2cd0800000000000000
+      internalID: -2581945046485456501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_55
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998ee7cfcd2cdf6e0800000000000000
+      internalID: -1802070021493561191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_56
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef7f60f9590ceed0800000000000000
+      internalID: -2383519820895256601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_57
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e60c7d34e2896020800000000000000
+      internalID: 2335541798564005606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_58
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 56
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d8b28135aa39440800000000000000
+      internalID: 4941480490020081032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83f9cb58d4c440d0800000000000000
+      internalID: -3439407781872274545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_60
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f17fcc5238c90170800000000000000
+      internalID: 8145261519707271664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_61
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3291cacff8fe130800000000000000
+      internalID: 3598252942674174937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_62
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f640c71e5d0ebaa0800000000000000
+      internalID: -6143458143910213900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e0611c4f4357ff0800000000000000
+      internalID: -39066795946668525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_64
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd6f9d0674793990800000000000000
+      internalID: -7405760061850554935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ab37f62a8c3d1e0800000000000000
+      internalID: -2174173595109705182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_66
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb738cf4a77a3ea00800000000000000
+      internalID: 784654903858968510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020a099d283156320800000000000000
+      internalID: 2550466216692064288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_68
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01feaf19b47ad54f0800000000000000
+      internalID: -838330012607516912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_69
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bc1c6a36dac20e0800000000000000
+      internalID: -2293267466727339181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_70
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9173186ef2052d1b0800000000000000
+      internalID: -5633352017226156263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_71
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf14cd7fb821ae4c0800000000000000
+      internalID: -4257570105357221380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_72
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4101d3bde49606980800000000000000
+      internalID: -8547716305342623724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_73
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8a1738afc0d2520800000000000000
+      internalID: 2678811623441934591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_74
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f12296d1bbb5160800000000000000
+      internalID: 7015406579551969183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de58e720ac7500fc0800000000000000
+      internalID: -3530725582721612307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_76
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f3ab27b89c21860800000000000000
+      internalID: 7499277930287742773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_77
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b273c298f206990d0800000000000000
+      internalID: -3415593085102704853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_78
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 8
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc5c0607bf016a90800000000000000
+      internalID: -7322554240372810564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 09a832f624e8223498f931783e8c2940
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":8.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_0: -859971721204628990
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_1: -5687860127584741922
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_10: 2036043677137494315
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_11: -3055365356423437207
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_12: 2039042907492977572
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_13: -8364077452377910584
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_14: -8014466557281905055
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_15: 84581742388866915
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_16: -5016895919860583097
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_17: 3755095978206936712
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_18: -845000306146023669
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_19: 4327184487714876620
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_2: 812218685950840011
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_20: -4133767949651791443
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_21: -5577310025693080349
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_22: 1204320274405323962
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_23: 3662470251329751011
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_24: -1474284367633153152
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_25: -5815640739017394482
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_26: -2924335612380621465
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_27: 4591291187426132242
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_28: 1679658137309988238
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_29: -8592876769811161480
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_3: -6072766031951917308
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_30: 8757480602714768991
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_31: 7649679685524724734
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_32: -4702751972295654526
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_33: 357667627544239641
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_34: -2414776133960581173
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_35: 6998081795174292765
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_36: -784699103818597305
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_37: -2849217294601023361
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_38: -4750345912042899642
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_39: 6145245311269885901
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_4: 411864917846090077
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_40: 8013546411781239740
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_41: -7029123927151783573
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_42: 3573879408761953762
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_43: -426085931967122669
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_44: 8374049197847098944
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_45: -8685121766786507846
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_46: 271939227976631845
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_47: -5227090487556191677
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_48: 8150310709276333561
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_49: -8358411125123163111
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_5: 7892287957211839341
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_50: 4632476471301798217
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_51: -4776569467267950249
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_52: -2655037783515538281
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_53: -43022517819895040
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_54: -2581945046485456501
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_55: -1802070021493561191
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_56: -2383519820895256601
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_57: 2335541798564005606
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_58: 4941480490020081032
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_59: -3439407781872274545
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_6: -622144449123084408
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_60: 8145261519707271664
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_61: 3598252942674174937
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_62: -6143458143910213900
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_63: -39066795946668525
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_64: -7405760061850554935
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_65: -2174173595109705182
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_66: 784654903858968510
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_67: 2550466216692064288
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_68: -838330012607516912
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_69: -2293267466727339181
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_7: -6003034713817064378
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_70: -5633352017226156263
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_71: -4257570105357221380
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_72: -8547716305342623724
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_73: 2678811623441934591
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_74: 7015406579551969183
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_75: -3530725582721612307
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_76: 7499277930287742773
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_77: -3415593085102704853
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_78: -7322554240372810564
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_8: 8155292820348220362
+      Custom___Edited_-_Sonic_the_Hedgehog_Customs_-_Sonic_the_Hedgehog_-_Sonic_Sonic_3__Knuckles_SMS_Sonic_1_Style_9: -5951022629924263461
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
