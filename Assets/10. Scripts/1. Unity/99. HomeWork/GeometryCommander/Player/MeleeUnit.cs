@@ -1,68 +1,78 @@
-using Geometry;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using static Geometry.EnemyUnit;
 
 namespace Geometry
 {
     public class MeleeUnit : PlayerUnit
     {
-        /*
-         * 일단 지금 해볼건 그냥 사거리 안에 들어오면 감지하는걸 해보자.
-         * Physics2D.OverShpere를 해서 콜라이더를 갖고 있는 객체 모두를 배열에 담아.
-         * 거기에서 가장 가까운 객체만 뽑아.
-         */
-
-        [Header("유닛 정보")]
-        [SerializeField] private float attackRange = 1.3f; // 이 유닛 고유의 사거리 (기본값 5)
-        [SerializeField] private LayerMask targetLayer;
-        [SerializeField] private float scanInterval = 0.2f;
-
-        private EnemyUnit targetEnemy;
-
-        private void Start()
+        private void Update()
         {
-            StartCoroutine(ScanCoroutine());
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, attackRange);
-        }
-
-        protected override void Attack()
-        {
-            if (targetEnemy != null)
+            if (current_Hp <= 0)
             {
-
+                Debug.Log($"{this.name} 사망");
+                Destroy(gameObject);
             }
         }
+
+        private void OnEnable()
+        {
+            StartCoroutine(FiniteStateMachineCoroutine());
+        }
+
+
+        private IEnumerator FiniteStateMachineCoroutine()
+        {
+            nextStateCoroutine = ScanCoroutine();
+
+            while (gameObject.activeInHierarchy)
+            {
+                yield return StartCoroutine(nextStateCoroutine);
+            }
+        }
+
 
         private IEnumerator ScanCoroutine()
         {
             while (true)
             {
-                FindTarget();
-                yield return new WaitForSeconds(scanInterval);
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, targetLayer);
+
+                if (hitEnemies.Length > 0)
+                {
+                    targetEnemy = GetClosestEnemy(hitEnemies);
+                    nextStateCoroutine = AttackCoroutine();
+                    yield break;
+                }
+                else
+                {
+                    targetEnemy = null;
+                }
+                yield return new WaitForSeconds(scanCooldown);
             }
         }
 
-        protected override void FindTarget()
+
+        private IEnumerator AttackCoroutine()
         {
-
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, targetLayer);
-
-            if (hitEnemies.Length > 0)
+            while (true)
             {
-                targetEnemy = GetClosestEnemy(hitEnemies);
+                if (targetEnemy == null)
+                {
+                    nextStateCoroutine = ScanCoroutine();
+                    yield break;
+                }
 
-                Debug.Log($"[{gameObject.name}] 타겟 지정 완료: {targetEnemy.name}");
-            }
-            else
-            {
-                targetEnemy = null;
+                if (targetEnemy != null && Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
+                {
+                    nextStateCoroutine = ScanCoroutine();
+                    yield break;
+                }
+
+                yield return new WaitForSeconds(attackDelay);
+                Debug.LogWarning("공격");
+                targetEnemy.TakeDamage(attackPower, myType);
+                yield return new WaitForSeconds(attackCooldown - attackDelay);
             }
         }
 
@@ -118,7 +128,14 @@ namespace Geometry
                     addDamage = 0.5f;
                 }
             }
-            maxHp -= damage * addDamage;
+            Debug.Log($"{this.name}이 {type}에게 {damage * addDamage}만큼 공격 받음");
+            current_Hp -= damage * addDamage;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
 }
