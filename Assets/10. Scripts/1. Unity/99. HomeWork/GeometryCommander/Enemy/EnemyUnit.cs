@@ -18,7 +18,6 @@ namespace Geometry
 
         [SerializeField] protected float attackRange;
         [SerializeField] protected float attackCooldown;
-        [SerializeField] protected float attackDelay;
         [SerializeField] protected float attackPower;
         [SerializeField] protected float maxHp;
         [SerializeField] protected float moveSpeed;
@@ -32,9 +31,6 @@ namespace Geometry
         protected bool IsBase;
         public float current_Hp;
         
-        
-        
-
         public virtual void TakeDamage(float damage, PlayerUnit.UnitType type)
         {
 

@@ -20,7 +20,6 @@ namespace Geometry
         [SerializeField] protected float attackRange;
         [SerializeField] protected float scanCooldown;
         [SerializeField] protected float attackCooldown;
-        [SerializeField] protected float attackDelay;
         [SerializeField] protected float attackPower;
         [SerializeField] protected float maxHp;
         [SerializeField] protected float maxMorale;

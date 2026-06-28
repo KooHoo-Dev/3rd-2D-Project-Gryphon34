@@ -43,8 +43,16 @@ namespace Geometry
             Support = 12
         }
 
+        public enum CommandState
+        {
+            Idle,
+            Commanding,
+            Spawning
+        }
+
         private int count = 0;
         private bool IsCorrect = false;
+        private CommandState currentState = CommandState.Idle;
 
         private Arrow[] arrows = new Arrow[4];
 
@@ -72,40 +80,61 @@ namespace Geometry
 
         private void Update()
         {
-            if (commandList.Count > 0 && IsCorrect == false)
+            switch (currentState)
             {
-                PlayerCommand();
-            }
-
-            if (IsCorrect)
-            {
-                if (Mouse.current.leftButton.wasPressedThisFrame)
-                {
-                    spawnedArrowImages.Clear();
-                    SetSpawnPosition();
-                    IsCorrect = false;
-                }
+                case CommandState.Idle:
+                    break;
+                case CommandState.Commanding:
+                    PlayerCommand();
+                    break;
+                case CommandState.Spawning:
+                    if (Mouse.current.leftButton.wasPressedThisFrame)
+                    {
+                        spawnedArrowImages.Clear();
+                        SetSpawnPosition();
+                    }
+                    break;
             }
         }
 
         public void OnTriangleClick()
         {
+            if (currentState != CommandState.Idle) return;
+            // 자원과 쿨타임 체크 로직
+            // if(currentResource <triangleCost) return;
+            // if(isTriangleCooldown) return;
             InitialCommand(SpawnType.Triangle);
+            currentState = CommandState.Commanding;
         }
 
         public void OnCircleClick()
         {
+            if (currentState != CommandState.Idle) return;
+            // 자원과 쿨타임 체크 로직
+            // if(currentResource <circleCost) return;
+            // if(iscircleCooldown) return;
             InitialCommand(SpawnType.Circle);
+            currentState = CommandState.Commanding;
         }
 
         public void OnSquareClick()
         {
+            if (currentState != CommandState.Idle) return;
+            // 자원과 쿨타임 체크 로직
+            // if(currentResource <squareCost) return;
+            // if(issquareCooldown) return;
             InitialCommand(SpawnType.Square);
+            currentState = CommandState.Commanding;
         }
 
         public void OnSupportClick()
         {
+            if (currentState != CommandState.Idle) return;
+            // 자원과 쿨타임 체크 로직
+            // if(currentResource <supportCost) return;
+            // if(issupportCooldown) return;
             InitialCommand(SpawnType.Support);
+            currentState = CommandState.Commanding;
         }
 
         private void PlayerCommand()

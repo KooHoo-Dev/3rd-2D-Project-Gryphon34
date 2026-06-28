@@ -57,22 +57,20 @@ namespace Geometry
         {
             while (true)
             {
-                if (targetEnemy == null)
+                if (targetEnemy == null||targetEnemy.current_Hp<=0)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
 
-                if (targetEnemy != null && Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
+                if (Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
-
-                yield return new WaitForSeconds(attackDelay);
                 Debug.LogWarning("공격");
                 targetEnemy.TakeDamage(attackPower, myType);
-                yield return new WaitForSeconds(attackCooldown - attackDelay);
+                yield return new WaitForSeconds(attackCooldown);
             }
         }
 

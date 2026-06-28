@@ -84,29 +84,32 @@ namespace Geometry
         {
             while (true)
             {
-                if (IsBlock||IsBase)
+                if (IsBlock)
                 {
-                    if (targetUnit == null)
+                    if (targetUnit == null || targetUnit.current_Hp<=0)
                     {
+                        IsBlock = false;
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-
-                    yield return new WaitForSeconds(attackDelay);
                     targetUnit.TakeDamage(attackPower, enemyType);
-                    yield return new WaitForSeconds(attackCooldown - attackDelay);
+                    yield return new WaitForSeconds(attackCooldown);
                 }
                 else if (IsBase)
                 {
                     if (playerBase == null)
                     {
+                        IsBase = false;
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-
-                    yield return new WaitForSeconds(attackDelay);
-                    targetUnit.TakeDamage(attackPower, enemyType);
-                    yield return new WaitForSeconds(attackCooldown - attackDelay);
+                    // playerBase.TakeDamage(attackPower, enemyType);
+                    yield return new WaitForSeconds(attackCooldown);
+                }
+                else
+                {
+                    nextStateCoroutine = ForwardCoroutine();
+                    yield break;
                 }
             }
         }

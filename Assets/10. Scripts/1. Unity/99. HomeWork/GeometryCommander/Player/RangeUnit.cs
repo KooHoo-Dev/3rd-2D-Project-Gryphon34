@@ -39,59 +39,57 @@ namespace Geometry
                 if (hitEnemies.Length > 0)
                 {
                     targetEnemy = GetLowHealthEnemy(hitEnemies);
-                    nextStateCoroutine = AttackCoroutine();
-                    yield break;
+                    if(targetEnemy != null)
+                    {
+                        nextStateCoroutine = AttackCoroutine();
+                        yield break;
+                    }
                 }
-                else
-                {
-                    targetEnemy = null;
-                }
+                targetEnemy = null;
                 yield return new WaitForSeconds(scanCooldown);
             }
         }
 
         private EnemyUnit GetLowHealthEnemy(Collider2D[] enemies)
         {
-            EnemyUnit currentTargetEnemy = enemies[0].GetComponent<EnemyUnit>(); // 기준 적
-            float currentLowestHealth = currentTargetEnemy.current_Hp; // 기준 적의 체력
+            EnemyUnit currentTargetEnemy = null;
+            float currentLowestHealth = Mathf.Infinity;
 
             foreach(Collider2D enemy in enemies)
             {
-                float checkingHealth = enemy.GetComponent<EnemyUnit>().current_Hp; // 지금 확인 할 적의 체력
-                if(currentLowestHealth >= checkingHealth) // 만약 기준 적의 체력이 지금 확인 한 적의 체력보다 높으면
+                EnemyUnit enemyComponent = enemy.GetComponent<EnemyUnit>();
+
+                if(enemyComponent != null && enemyComponent.current_Hp > 0)
                 {
-                    currentLowestHealth = checkingHealth;
-                    currentTargetEnemy = enemy.GetComponent<EnemyUnit>();
+                    float checkingHealth = enemyComponent.current_Hp;
+                    if (currentLowestHealth >= checkingHealth)
+                    {
+                        currentLowestHealth = checkingHealth;
+                        currentTargetEnemy = enemyComponent;
+                    }
                 }
             }
-
-            if (currentTargetEnemy != null)
-            {
-                return currentTargetEnemy;
-            }
-            return null;
+            return currentTargetEnemy;
         }
 
         private IEnumerator AttackCoroutine()
         {
             while (true)
             {
-                if (targetEnemy == null)
+                if (targetEnemy == null || targetEnemy.current_Hp <= 0)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
 
-                if (targetEnemy != null && Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
+                if (Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
 
-                yield return new WaitForSeconds(attackDelay);
-                Debug.LogWarning("공격");
                 targetEnemy.TakeDamage(attackPower, myType);
-                yield return new WaitForSeconds(attackCooldown - attackDelay);
+                yield return new WaitForSeconds(attackCooldown);
             }
         }
 
