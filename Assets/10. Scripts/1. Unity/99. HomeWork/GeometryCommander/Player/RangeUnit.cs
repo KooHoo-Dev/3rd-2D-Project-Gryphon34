@@ -11,7 +11,8 @@ namespace Geometry
         {
             if (current_Hp <= 0)
             {
-                Destroy(gameObject);
+                Debug.Log($"{this.name} 사망");
+                PlayerManager.Instance.Dead(this);
             }
         }
 

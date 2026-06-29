@@ -23,15 +23,17 @@ namespace Geometry
         [SerializeField] protected float moveSpeed;
         [SerializeField] protected float viewAngle = 100f;
         [SerializeField]protected Base playerBase;
+        [SerializeField]protected int reward = 5;
 
         protected IEnumerator nextStateCoroutine;
         public EnemyType enemyType;
         public PlayerUnit targetUnit;
         protected bool IsBlock;
         protected bool IsBase;
+        protected bool IsDead = false;
         public float current_Hp;
         
-        public virtual void TakeDamage(float damage, PlayerUnit.UnitType type)
+        public virtual void TakeDamage(float damage, PlayerManager.UnitType type)
         {
 
         }

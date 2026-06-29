@@ -10,12 +10,7 @@ namespace Geometry
         // bool 변수 : 최초_조우_상태
         // GameObject : 현재_타겟
 
-        public enum UnitType
-        {
-            Triangle,
-            Circle,
-            Square,
-        }
+        
 
         [SerializeField] protected float attackRange;
         [SerializeField] protected float scanCooldown;
@@ -26,7 +21,7 @@ namespace Geometry
         [SerializeField] protected LayerMask targetLayer;
 
         protected IEnumerator nextStateCoroutine;
-        public UnitType myType;
+        public PlayerManager.UnitType myType;
         public EnemyUnit targetEnemy;
         public float current_Hp;
         public float current_Morale;

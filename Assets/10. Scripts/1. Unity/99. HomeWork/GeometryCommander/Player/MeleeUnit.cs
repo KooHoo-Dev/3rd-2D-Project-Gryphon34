@@ -6,12 +6,13 @@ namespace Geometry
 {
     public class MeleeUnit : PlayerUnit
     {
+
         private void Update()
         {
             if (current_Hp <= 0)
             {
                 Debug.Log($"{this.name} 사망");
-                Destroy(gameObject);
+                PlayerManager.Instance.Dead(this);
             }
         }
 
@@ -63,12 +64,14 @@ namespace Geometry
                     yield break;
                 }
 
-                if (Vector3.Distance(targetEnemy.transform.position, this.transform.position) >= attackRange)
+                float distanceToTarget = Vector3.Distance(targetEnemy.transform.position, this.transform.position);
+
+                if (distanceToTarget >= attackRange)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
-                Debug.LogWarning("공격");
+                Debug.Log($"공격 : {targetEnemy.name}, {distanceToTarget}");
                 targetEnemy.TakeDamage(attackPower, myType);
                 yield return new WaitForSeconds(attackCooldown);
             }
@@ -102,7 +105,7 @@ namespace Geometry
         public override void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {
             float addDamage = 1.0f;
-            if (myType == UnitType.Circle)
+            if (myType == PlayerManager.UnitType.Circle)
             {
                 // 네모, 세모만
                 if (type == EnemyType.Square)
@@ -114,7 +117,7 @@ namespace Geometry
                     addDamage = 2.0f;
                 }
             }
-            else if (myType == UnitType.Square)
+            else if (myType == PlayerManager.UnitType.Square)
             {
                 // 동그라미, 세모만
                 if (type == EnemyType.Triangle)
@@ -126,7 +129,7 @@ namespace Geometry
                     addDamage = 0.5f;
                 }
             }
-            Debug.Log($"{this.name}이 {type}에게 {damage * addDamage}만큼 공격 받음");
+            //Debug.Log($"{this.name}이 {type}에게 {damage * addDamage}만큼 공격 받음");
             current_Hp -= damage * addDamage;
         }
 

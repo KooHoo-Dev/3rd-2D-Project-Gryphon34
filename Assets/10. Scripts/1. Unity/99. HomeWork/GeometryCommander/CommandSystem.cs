@@ -1,5 +1,6 @@
 using Study.Utilities;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -9,22 +10,13 @@ namespace Geometry
     public class CommandSystem : MonoBehaviour
     {
         /*
-         * 맞다 아니다를 입력할때마다 판단하고 있는데
-         * 틀리면 다시 초기화 하고 커맨드 입력
-         * 맞으면 카운트를 올려서
-         * commandList의 
-         * 
-         * 
-         * 순서는 버튼을 눌러
-         * 그러면 커맨드 창 초기화 되서 커맨드 리스트에 저장해
-         * 그리고 유저는 입력을 해
-         * 입력 할 때 마다 확인해
-         * 맞으면 계속 해
-         * 틀리면 다시 커맨드 창 초기화 해서 커맨드 리스트에 저장해
-         * 그리고 유저는 입력을 해 반복해
-         * 
-         * 하다가 커맨드 리스트의 길이만큼 맞으면
-         * 큐브를 소환해
+         * 대기 상태
+         * 취소를 할 수 있을까
+         * 언제 취소를 할 수 있게 만들까
+         * 소환 하기 전까지만 취소 할 수 있게 하자.
+         * 그냥 취소는 언제든 할 수 있게 하는게 좋을 듯
+         * 입력 대기
+         * 클릭 대기
          */
 
         enum Arrow
@@ -35,14 +27,6 @@ namespace Geometry
             Right,
         }
 
-        enum SpawnType
-        {
-            Triangle = 5,
-            Circle = 7,
-            Square = 9,
-            Support = 12
-        }
-
         public enum CommandState
         {
             Idle,
@@ -51,16 +35,16 @@ namespace Geometry
         }
 
         private int count = 0;
-        private bool IsCorrect = false;
-        private CommandState currentState = CommandState.Idle;
 
+        private CommandState currentState = CommandState.Idle;
         private Arrow[] arrows = new Arrow[4];
 
-        private SpawnType spawnType;
+        private PlayerManager.UnitType spawnType;
         private List<Arrow> commandList = new List<Arrow>();
         private List<Arrow> InputCommand = new List<Arrow>();
         private List<Image> spawnedArrowImages = new List<Image>();
 
+        public PlayerManager playerManager;
         private GameObject spawn;
         public GameObject trianglePre;
         public GameObject circlePre;
@@ -80,6 +64,8 @@ namespace Geometry
 
         private void Update()
         {
+
+
             switch (currentState)
             {
                 case CommandState.Idle:
@@ -99,42 +85,55 @@ namespace Geometry
 
         public void OnTriangleClick()
         {
-            if (currentState != CommandState.Idle) return;
+            spawnType = PlayerManager.UnitType.Triangle;
             // 자원과 쿨타임 체크 로직
-            // if(currentResource <triangleCost) return;
-            // if(isTriangleCooldown) return;
-            InitialCommand(SpawnType.Triangle);
+            if (CheckCondition(spawnType) == false) return;
+            InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
 
         public void OnCircleClick()
         {
-            if (currentState != CommandState.Idle) return;
+            spawnType = PlayerManager.UnitType.Circle;
             // 자원과 쿨타임 체크 로직
-            // if(currentResource <circleCost) return;
-            // if(iscircleCooldown) return;
-            InitialCommand(SpawnType.Circle);
+            if (CheckCondition(spawnType) == false) return;
+            InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
 
         public void OnSquareClick()
         {
-            if (currentState != CommandState.Idle) return;
+            spawnType = PlayerManager.UnitType.Square;
             // 자원과 쿨타임 체크 로직
-            // if(currentResource <squareCost) return;
-            // if(issquareCooldown) return;
-            InitialCommand(SpawnType.Square);
+            if (CheckCondition(spawnType) == false) return;
+
+            InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
 
         public void OnSupportClick()
         {
-            if (currentState != CommandState.Idle) return;
+            spawnType = PlayerManager.UnitType.Support;
             // 자원과 쿨타임 체크 로직
-            // if(currentResource <supportCost) return;
-            // if(issupportCooldown) return;
-            InitialCommand(SpawnType.Support);
+            if (CheckCondition(spawnType) == false) return;
+
+            InitialCommand(spawnType);
             currentState = CommandState.Commanding;
+        }
+
+        private bool CheckCondition(PlayerManager.UnitType type)
+        {
+            if (playerManager.IsOnCooldown(spawnType))
+            {
+                Debug.LogWarning($"{spawnType}이 쿨다운 중입니다.");
+                return false;
+            }
+            if (playerManager.CanAfford(spawnType) == false)
+            {
+                Debug.LogWarning($"자원이 부족합니다.");
+                return false;
+            }
+            return true;
         }
 
         private void PlayerCommand()
@@ -170,8 +169,8 @@ namespace Geometry
                 if (count == commandList.Count)
                 {
                     Debug.Log("성공");
-                    IsCorrect = true;
                     count = 0;
+                    currentState = CommandState.Spawning;
                 }
             }
             else
@@ -189,12 +188,11 @@ namespace Geometry
             }
         }
 
-        private void InitialCommand(SpawnType type)
+        private void InitialCommand(PlayerManager.UnitType type)
         {
             commandList.Clear();
             InputCommand.Clear();
             count = 0;
-            spawnType = type;
 
             for (int i = 0; i < (int)type; ++i)
             {
@@ -216,23 +214,33 @@ namespace Geometry
             worldMousePoint.z = transform.position.z; // z값을 보정
                                                       // 마우스가 클릭한 곳에 소환
 
+            PlayerManager.UnitType unitType;
+
             switch (spawnType)
             {
-                case SpawnType.Triangle:
+                case PlayerManager.UnitType.Triangle:
                     spawn = trianglePre;
+                    unitType = PlayerManager.UnitType.Triangle;
+                    playerManager.UseCost(unitType);
                     break;
-                case SpawnType.Circle:
+                case PlayerManager.UnitType.Circle:
                     spawn = circlePre;
+                    unitType = PlayerManager.UnitType.Circle;
+                    playerManager.UseCost(unitType);
                     break;
-                case SpawnType.Square:
+                case PlayerManager.UnitType.Square:
                     spawn = squarePre;
+                    unitType = PlayerManager.UnitType.Square;
+                    playerManager.UseCost(unitType);
                     break;
-                case SpawnType.Support:
+                case PlayerManager.UnitType.Support:
                     spawn = supportPre;
+                    unitType = PlayerManager.UnitType.Support;
+                    playerManager.UseCost(unitType);
                     break;
             }
             GameObject.Instantiate(spawn, worldMousePoint, Quaternion.identity);
-
+            currentState = CommandState.Idle;
             commandList.Clear();
             InputCommand.Clear();
         }

@@ -105,18 +105,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ceb62213d3dc034ba5d10bef9c56112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeUnit
-  attackRange: 2
+  attackRange: 3
+  scanCooldown: 0.2
+  attackCooldown: 2
+  attackPower: 3
+  maxHp: 70
+  maxMorale: 100
   targetLayer:
     serializedVersion: 2
     m_Bits: 256
-  scanCooldown: 0.2
-  attackCooldown: 2
-  attackDelay: 0.5
-  maxHp: 70
-  maxMorale: 100
-  attackPower: 3
+  myType: 5
   targetEnemy: {fileID: 0}
-  myType: 0
   current_Hp: 70
   current_Morale: 100
 --- !u!60 &6548883799235822484

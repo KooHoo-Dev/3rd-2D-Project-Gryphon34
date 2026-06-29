@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Geometry
@@ -7,8 +8,12 @@ namespace Geometry
     {
         private void Update()
         {
-            if (current_Hp <= 0)
+            if (current_Hp <= 0 && !IsDead)
             {
+                IsDead = true;
+                Debug.Log($"{enemyType} 사망");
+                PlayerManager.Instance.AddCost(reward);
+
                 Destroy(gameObject);
             }
         }
@@ -59,7 +64,7 @@ namespace Geometry
             {
                 if (hit.GetComponent<EnemyUnit>())
                 {
-                    return;
+                    continue;
                 }
                 Vector3 dirToTarget = (hit.transform.position - transform.position).normalized;
                 if (Vector3.Angle(transform.up, dirToTarget) < viewAngle / 2)
@@ -92,7 +97,13 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-                    targetUnit.TakeDamage(attackPower, enemyType);
+
+                    if (Vector3.Distance(targetUnit.transform.position, transform.position) <= attackRange)
+                    {
+                        Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
+                        targetUnit.TakeDamage(attackPower, enemyType);
+                    }
+
                     yield return new WaitForSeconds(attackCooldown);
                 }
                 else if (IsBase)
@@ -103,7 +114,7 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-                    // playerBase.TakeDamage(attackPower, enemyType);
+                    playerBase.BaseTakeDamage(attackPower);
                     yield return new WaitForSeconds(attackCooldown);
                 }
                 else
@@ -114,14 +125,14 @@ namespace Geometry
             }
         }
 
-        public override void TakeDamage(float damage, PlayerUnit.UnitType type)
+        public override void TakeDamage(float damage, PlayerManager.UnitType type)
         {
             float addDamage = 1.0f;
-            if (type == PlayerUnit.UnitType.Circle)
+            if (type == PlayerManager.UnitType.Circle)
             {
                 addDamage = 0.5f;
             }
-            else if (type == PlayerUnit.UnitType.Square)
+            else if (type == PlayerManager.UnitType.Square)
             {
                 addDamage = 2.0f;
             }

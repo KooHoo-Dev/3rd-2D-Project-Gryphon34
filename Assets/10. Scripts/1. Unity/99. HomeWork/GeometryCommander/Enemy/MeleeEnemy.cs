@@ -7,11 +7,14 @@ namespace Geometry
 {
     public class MeleeEnemy : EnemyUnit
     {
-        void Update()
+        private void Update()
         {
-            if (current_Hp <= 0)
+            if (current_Hp <= 0 && !IsDead)
             {
-                Debug.Log($"{this.name}사망");
+                IsDead = true;
+                Debug.Log($"{enemyType} 사망");
+                PlayerManager.Instance.AddCost(reward);
+
                 Destroy(gameObject);
             }
         }
@@ -62,7 +65,7 @@ namespace Geometry
             {
                 if (hit.GetComponent<EnemyUnit>())
                 {
-                    return;
+                    continue;
                 }
                 Vector3 dirToTarget = (hit.transform.position - transform.position).normalized;
                 if (Vector3.Angle(transform.up,dirToTarget) < viewAngle / 2)
@@ -96,7 +99,7 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-
+                    Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
                     targetUnit.TakeDamage(attackPower, enemyType);
                     yield return new WaitForSeconds(attackCooldown);
                 }
@@ -108,7 +111,7 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
-                    // playerBase.TakeDamage(attackPower, enemyType); // 베이스 데미지 구현
+                    playerBase.BaseTakeDamage(attackPower);
                     yield return new WaitForSeconds(attackCooldown);
                 }
                 else
@@ -119,17 +122,17 @@ namespace Geometry
             }
         }
 
-        public override void TakeDamage(float damage, PlayerUnit.UnitType type)
+        public override void TakeDamage(float damage, PlayerManager.UnitType type)
         {
             float addDamage = 1.0f;
             if (enemyType == EnemyType.Circle)
             {
                 // 네모, 세모만
-                if (type == PlayerUnit.UnitType.Square)
+                if (type == PlayerManager.UnitType.Square)
                 {
                     addDamage = 0.5f;
                 }
-                else if (type == PlayerUnit.UnitType.Triangle)
+                else if (type == PlayerManager.UnitType.Triangle)
                 {
                     addDamage = 2.0f;
                 }
@@ -137,11 +140,11 @@ namespace Geometry
             else if (enemyType == EnemyType.Square)
             {
                 // 동그라미, 세모만
-                if (type == PlayerUnit.UnitType.Triangle)
+                if (type == PlayerManager.UnitType.Triangle)
                 {
                     addDamage = 2.0f;
                 }
-                else if (type == PlayerUnit.UnitType.Circle)
+                else if (type == PlayerManager.UnitType.Circle)
                 {
                     addDamage = 0.5f;
                 }
