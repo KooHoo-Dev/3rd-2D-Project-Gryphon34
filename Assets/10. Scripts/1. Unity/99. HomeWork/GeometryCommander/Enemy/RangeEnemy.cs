@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Geometry
@@ -38,14 +37,14 @@ namespace Geometry
             while (true)
             {
                 Vector3 enemyPos = transform.position;
-                Vector3 basePosition = playerBase.transform.position;
+                Vector3 basePos = playerBase.transform.position;
                 CheckPathBlock();
                 if (IsBlock || IsBase)
                 {
                     nextStateCoroutine = AttackCoroutine();
                     yield break;
                 }
-                Vector3 dir = (basePosition - enemyPos).normalized;
+                Vector3 dir = (basePos - enemyPos).normalized;
                 transform.up = dir;
                 transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
                 yield return null;
@@ -136,8 +135,13 @@ namespace Geometry
             {
                 addDamage = 2.0f;
             }
-            Debug.Log($"{enemyType}이 {type}에게 {damage * addDamage}만큼 공격 받음");
             current_Hp -= damage * addDamage;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
 }

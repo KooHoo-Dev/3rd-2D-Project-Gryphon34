@@ -42,13 +42,13 @@ namespace Geometry
                 if (hitEnemies.Length > 0)
                 {
                     targetEnemy = GetClosestEnemy(hitEnemies);
-                    nextStateCoroutine = AttackCoroutine();
-                    yield break;
+                    if(targetEnemy != null)
+                    {
+                        nextStateCoroutine = AttackCoroutine();
+                        yield break;
+                    }
                 }
-                else
-                {
-                    targetEnemy = null;
-                }
+                targetEnemy = null;
                 yield return new WaitForSeconds(scanCooldown);
             }
         }
@@ -64,14 +64,25 @@ namespace Geometry
                     yield break;
                 }
 
-                float distanceToTarget = Vector3.Distance(targetEnemy.transform.position, this.transform.position);
+                Collider2D targetCol = targetEnemy.GetComponent<Collider2D>();
 
-                if (distanceToTarget >= attackRange)
+                if (targetCol !=null)
+                {
+                    Vector3 closestEdge = targetCol.ClosestPoint(transform.position);
+                    float distanceToEdge = Vector3.Distance(transform.position, closestEdge);
+
+                    if (distanceToEdge > attackRange)
+                    {
+                        nextStateCoroutine = ScanCoroutine();
+                        yield break;
+                    }
+                }
+                else
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
-                Debug.Log($"공격 : {targetEnemy.name}, {distanceToTarget}");
+                Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
                 targetEnemy.TakeDamage(attackPower, myType);
                 yield return new WaitForSeconds(attackCooldown);
             }
@@ -80,19 +91,23 @@ namespace Geometry
         private EnemyUnit GetClosestEnemy(Collider2D[] enemies)
         {
             Transform closestEnemy = null; // 가까운 적의 위치를 담기위해
-            float closestDistanceSqr = Mathf.Infinity; //거리 비교를 하기 위해 가장 큰 수
+            float closestDistance = Mathf.Infinity; //거리 비교를 하기 위해 가장 큰 수
             Vector3 currentPosition = transform.position; // 내 위치를 알기 위해
 
             foreach (Collider2D enemy in enemies) //위에서 담아온 적들을 collider2D enemy로 하나씩 넣기
             {
-                Vector3 directionalToTarget = enemy.transform.position - currentPosition; // 거리 계산 적 위치 - 내 위치
+                EnemyUnit enemyComponent = enemy.GetComponent<EnemyUnit>();
 
-                float dSqrToTarget = directionalToTarget.sqrMagnitude; // 거리의 제곱
-
-                if (dSqrToTarget < closestDistanceSqr) // 거리의 제곱보다 가까운 적의 위치가 멀다면
+                if(enemyComponent != null && enemyComponent.current_Hp > 0)
                 {
-                    closestDistanceSqr = dSqrToTarget; // 가까운 적의 위치를 방금 구한 거리의 적을 삽입
-                    closestEnemy = enemy.transform; // 가까운 적의 위치= 에너미의 위치
+                    Vector3 closet = enemy.ClosestPoint(currentPosition);
+                    float distanceTo = Vector3.Distance(currentPosition, closet);
+
+                    if(distanceTo< closestDistance)
+                    {
+                        closestDistance = distanceTo;
+                        closestEnemy = enemy.transform;
+                    }
                 }
             }
             if (closestEnemy != null)
@@ -133,9 +148,9 @@ namespace Geometry
             current_Hp -= damage * addDamage;
         }
 
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }

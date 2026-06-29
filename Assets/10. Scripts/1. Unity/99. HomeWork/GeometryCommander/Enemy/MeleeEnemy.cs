@@ -152,6 +152,12 @@ namespace Geometry
             Debug.Log($"{enemyType}이 {type}에게 {damage*addDamage}만큼 공격 받음");
             current_Hp -=damage*addDamage;
         }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, attackRange);
+        }
     }
 }
 

@@ -88,7 +88,7 @@ namespace Geometry
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
-
+                Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
                 targetEnemy.TakeDamage(attackPower, myType);
                 yield return new WaitForSeconds(attackCooldown);
             }
@@ -105,12 +105,11 @@ namespace Geometry
             {
                 addDamage = 2.0f;
             }
-            Debug.Log($"{this.name}이 {type}에게 {damage * addDamage}만큼 공격 받음");
             current_Hp -= damage * addDamage;
         }
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
