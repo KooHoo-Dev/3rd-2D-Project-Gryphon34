@@ -33,6 +33,11 @@ namespace Geometry
         protected bool IsDead = false;
         public float current_Hp;
         
+        public void Awake()
+        {
+            playerBase = GameObject.Find("Base").GetComponent<Base>();
+        }
+
         public virtual void TakeDamage(float damage, PlayerManager.UnitType type)
         {
 

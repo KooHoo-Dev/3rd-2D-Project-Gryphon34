@@ -27,7 +27,7 @@ namespace Geometry
         public float current_Morale;
 
 
-        public  virtual void TakeDamage(float damage, EnemyUnit.EnemyType type)
+        public virtual void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {
 
         }
