@@ -1,7 +1,6 @@
 using Jay;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Geometry
@@ -32,6 +31,7 @@ namespace Geometry
         }
 
         private Dictionary<UnitType, bool> IsCooldownDic = new Dictionary<UnitType, bool>();
+        public Dictionary <UnitType, float> UnitCooldownDic = new Dictionary<UnitType, float>();
 
         [Header("자원 및 인구수 조절")]
         [field: SerializeField] public int maxCost { get; private set; }
@@ -51,12 +51,18 @@ namespace Geometry
         [Header("자원 획득")]
         [SerializeField] private int costPerSecond = 1;
 
+
         // 인구수는 MaxSupply가 있고 이거를 넘어가면 안됨
         // currentSupply는 0으로 시작해서 소환 할때 마다 인구수가 추가되는거임
 
         private void Start()
         {
             StartCoroutine(PassiveCostRooutine());
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
         }
 
         private IEnumerator PassiveCostRooutine()
@@ -131,7 +137,9 @@ namespace Geometry
         public IEnumerator UnitCoolDown(UnitType type)
         {
             IsCooldownDic[type] = true;
-            int cooldownSec = 0;
+            float cooldownSec=0f;
+            float currentTime = 0f;
+
             switch (type)
             {
                 case UnitType.Triangle:
@@ -148,9 +156,15 @@ namespace Geometry
                     break;
             }
 
-            yield return new WaitForSeconds(cooldownSec);
-
+            while (true)
+            {
+                if (currentTime >= cooldownSec) break;
+                currentTime += Time.deltaTime;
+                UnitCooldownDic[type]=currentTime/ cooldownSec;
+                yield return null;
+            }
             IsCooldownDic[type] = false;
+            UnitCooldownDic[type] = 1f;
         }
 
         public bool IsOnCooldown(UnitType type)

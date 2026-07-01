@@ -1,5 +1,4 @@
 using UnityEngine;
-using Study.Utilities;
 using System.Collections;
 
 namespace Geometry
@@ -22,8 +21,8 @@ namespace Geometry
         [SerializeField] protected float maxHp;
         [SerializeField] protected float moveSpeed;
         [SerializeField] protected float viewAngle = 100f;
-        [SerializeField]protected Base playerBase;
-        [SerializeField]protected int reward = 5;
+        [SerializeField] protected Base playerBase;
+        [SerializeField] protected int reward = 5;
 
         protected IEnumerator nextStateCoroutine;
         public EnemyType enemyType;

@@ -1,6 +1,6 @@
+using Michsky.UI.Shift;
 using Study.Utilities;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -9,16 +9,6 @@ namespace Geometry
 {
     public class CommandSystem : MonoBehaviour
     {
-        /*
-         * 대기 상태
-         * 취소를 할 수 있을까
-         * 언제 취소를 할 수 있게 만들까
-         * 소환 하기 전까지만 취소 할 수 있게 하자.
-         * 그냥 취소는 언제든 할 수 있게 하는게 좋을 듯
-         * 입력 대기
-         * 클릭 대기
-         */
-
         enum Arrow
         {
             Up,
@@ -45,6 +35,7 @@ namespace Geometry
         private List<Image> spawnedArrowImages = new List<Image>();
 
         public PlayerManager playerManager;
+        
         private GameObject spawn;
         public GameObject trianglePre;
         public GameObject circlePre;
@@ -64,8 +55,6 @@ namespace Geometry
 
         private void Update()
         {
-
-
             switch (currentState)
             {
                 case CommandState.Idle:
@@ -86,7 +75,7 @@ namespace Geometry
         public void OnTriangleClick()
         {
             spawnType = PlayerManager.UnitType.Triangle;
-            // 자원과 쿨타임 체크 로직
+
             if (CheckCondition(spawnType) == false) return;
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
@@ -95,7 +84,7 @@ namespace Geometry
         public void OnCircleClick()
         {
             spawnType = PlayerManager.UnitType.Circle;
-            // 자원과 쿨타임 체크 로직
+
             if (CheckCondition(spawnType) == false) return;
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
@@ -104,7 +93,7 @@ namespace Geometry
         public void OnSquareClick()
         {
             spawnType = PlayerManager.UnitType.Square;
-            // 자원과 쿨타임 체크 로직
+            
             if (CheckCondition(spawnType) == false) return;
 
             InitialCommand(spawnType);

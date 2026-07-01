@@ -1,12 +1,15 @@
+using iBetaGames;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using static Geometry.EnemyUnit;
 
 namespace Geometry
 {
     public class RangeUnit : PlayerUnit
     {
+        [field: SerializeField] public BulletController BulletPrefab { get; set; }
+        [field: SerializeField] public Transform FirePoint { get; private set; }
+
         private void Update()
         {
             if (current_Hp <= 0)
@@ -88,11 +91,20 @@ namespace Geometry
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
+
+                BulletController bullet = Instantiate(BulletPrefab, FirePoint.position, Quaternion.identity);
+                // 불렛 구현해야됨. RangeController와 Study.ActionPlatformer, Bullet 참고.
+                // 우리가 쓰는 거는 BulletController.cs
+
+
+                yield return new WaitForSeconds(attackDelay);
                 Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
                 targetEnemy.TakeDamage(attackPower, myType);
-                yield return new WaitForSeconds(attackCooldown);
+                yield return new WaitForSeconds(attackCooldown- attackDelay);
             }
         }
+
+
 
         public override void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {

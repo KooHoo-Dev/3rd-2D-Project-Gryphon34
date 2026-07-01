@@ -22,6 +22,11 @@ namespace Geometry
             StartCoroutine(SpawnTimer());
         }
 
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+        }
+
         private void SetSpawnPos()
         {
             // 일단 기준 위치를 지정

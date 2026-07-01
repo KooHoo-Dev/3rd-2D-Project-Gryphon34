@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using static Geometry.EnemyUnit;
-using UnityEngine.UIElements;
 
 namespace Geometry
 {

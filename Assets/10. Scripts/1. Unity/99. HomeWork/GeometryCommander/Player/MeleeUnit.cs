@@ -21,7 +21,6 @@ namespace Geometry
             StartCoroutine(FiniteStateMachineCoroutine());
         }
 
-
         private IEnumerator FiniteStateMachineCoroutine()
         {
             nextStateCoroutine = ScanCoroutine();
