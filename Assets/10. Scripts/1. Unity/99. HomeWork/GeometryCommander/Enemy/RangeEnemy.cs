@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ namespace Geometry
 {
     public class RangeEnemy : EnemyUnit
     {
+
+        [SerializeField] private GameObject bulletPrefab;
         private void Update()
         {
             if (current_Hp <= 0 && !IsDead)
@@ -57,7 +60,7 @@ namespace Geometry
             {
                 return;
             }
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 2.0f);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
 
             foreach (Collider2D hit in hits)
             {
@@ -97,13 +100,36 @@ namespace Geometry
                         yield break;
                     }
 
-                    if (Vector3.Distance(targetUnit.transform.position, transform.position) <= attackRange)
-                    {
-                        Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
-                        targetUnit.TakeDamage(attackPower, enemyType);
-                    }
+                    Collider2D targetCol = targetUnit.GetComponent<Collider2D>();
 
-                    yield return new WaitForSeconds(attackCooldown);
+                    if (targetCol != null)
+                    {
+                        Vector3 closestEdge = targetCol.ClosestPoint(transform.position);
+                        float distanceToEdge = Vector3.Distance(transform.position, closestEdge);
+
+                        if (distanceToEdge > attackRange)
+                        {
+                            nextStateCoroutine = ForwardCoroutine();
+                            yield break;
+                        }
+                    }
+                    else
+                    {
+                        nextStateCoroutine = ForwardCoroutine();
+                        yield break;
+                    }
+                    GameObject bulletObj = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+
+                    Bullet bullet = bulletObj.GetComponent<Bullet>();
+
+                    float dir = targetUnit.transform.position.x - transform.position.x;
+
+                    Vector3 left = Vector3.right * Mathf.Sign(dir);
+                    bullet.SetTarget(targetUnit.gameObject, left);
+                    yield return new WaitForSeconds(attackDelay);
+                    Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
+                    targetUnit.TakeDamage(attackPower, enemyType);
+                    yield return new WaitForSeconds(attackCooldown- attackDelay);
                 }
                 else if (IsBase)
                 {
@@ -113,8 +139,10 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
+                    yield return new WaitForSeconds(attackDelay);
+                    Debug.Log($"{this.name}이 {playerBase}에게 {attackPower}만큼 공격");
                     playerBase.BaseTakeDamage(attackPower);
-                    yield return new WaitForSeconds(attackCooldown);
+                    yield return new WaitForSeconds(attackCooldown - attackDelay);
                 }
                 else
                 {

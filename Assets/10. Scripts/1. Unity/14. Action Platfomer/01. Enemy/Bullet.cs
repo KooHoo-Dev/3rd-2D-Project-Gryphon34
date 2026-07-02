@@ -10,6 +10,7 @@ namespace Study_ActionPlatformer
         // Update is called once per frame
         private void Update()
         {
+
             transform.Translate(foward * Speed * Time.deltaTime);
         }
 

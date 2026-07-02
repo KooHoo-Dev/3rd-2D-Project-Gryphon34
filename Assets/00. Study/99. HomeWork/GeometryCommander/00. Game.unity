@@ -319,9 +319,9 @@ MonoBehaviour:
   spawnCount: 3
   deafultPos: {fileID: 2059477852}
   spawnList:
+  - {fileID: 7100632272512892128, guid: b585ea6fee4ec25468b0760a3459f445, type: 3}
   - {fileID: 8905176315231206617, guid: 11d866ae8c81ad14cb35181331a5e4e8, type: 3}
   - {fileID: 7370354963611262657, guid: 7f95bdd3c9bac40409566666477f8370, type: 3}
-  - {fileID: 7100632272512892128, guid: b585ea6fee4ec25468b0760a3459f445, type: 3}
 --- !u!4 &175524833
 Transform:
   m_ObjectHideFlags: 0

@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.14809836, y: 0.14809836, z: 0.14809836}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6449867951776403963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8330398039468248590
@@ -108,6 +109,7 @@ MonoBehaviour:
   attackRange: 3
   scanCooldown: 0.2
   attackCooldown: 2
+  attackDelay: 0.5
   attackPower: 5
   maxHp: 70
   maxMorale: 100
@@ -118,6 +120,7 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   current_Hp: 70
   current_Morale: 100
+  bulletPrefab: {fileID: 8380417184654902910, guid: e172550658e23214dbb6485f6455a64d, type: 3}
 --- !u!60 &6548883799235822484
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -257,3 +260,34 @@ PolygonCollider2D:
       - {x: -1.8443516, y: -3.8450794}
       - {x: -1.736751, y: -3.777829}
   m_UseDelaunayMesh: 1
+--- !u!1 &4284157998280581998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6449867951776403963}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6449867951776403963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284157998280581998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5039776504315051353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

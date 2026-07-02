@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1218459199198623248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3575797261204909314}
+  m_Layer: 8
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3575797261204909314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218459199198623248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2844076315246444808}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7100632272512892128
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +62,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.14809836, y: 0.14809836, z: 0.14809836}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3575797261204909314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2520504091838886045
@@ -105,17 +137,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea79851aeaeac1469af4c60b8e31760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.RangeEnemy
-  attackRange: 2.5
+  attackRange: 2
+  attackDelay: 0
   attackCooldown: 2
   attackPower: 4
   maxHp: 60
   moveSpeed: 0.7
-  viewAngle: 100
+  viewAngle: 180
   playerBase: {fileID: 0}
   reward: 5
   enemyType: 0
   targetUnit: {fileID: 0}
   current_Hp: 60
+  bulletPrefab: {fileID: 8380417184654902910, guid: e172550658e23214dbb6485f6455a64d, type: 3}
 --- !u!60 &1767804495834296384
 PolygonCollider2D:
   m_ObjectHideFlags: 0

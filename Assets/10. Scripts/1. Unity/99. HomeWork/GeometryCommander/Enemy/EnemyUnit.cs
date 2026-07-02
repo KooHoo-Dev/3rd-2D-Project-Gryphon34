@@ -16,6 +16,7 @@ namespace Geometry
         }
 
         [SerializeField] protected float attackRange;
+        [SerializeField] protected float attackDelay;
         [SerializeField] protected float attackCooldown;
         [SerializeField] protected float attackPower;
         [SerializeField] protected float maxHp;

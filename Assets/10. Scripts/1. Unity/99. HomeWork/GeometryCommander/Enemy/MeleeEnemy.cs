@@ -57,7 +57,7 @@ namespace Geometry
             {
                 return;
             }
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.3f);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
 
             foreach(Collider2D hit in hits)
             {
@@ -84,7 +84,6 @@ namespace Geometry
             }
         }
 
-
         private IEnumerator AttackCoroutine()
         {
             while (true)
@@ -97,9 +96,29 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
+
+                    Collider2D targetCol = targetUnit.GetComponent<Collider2D>();
+
+                    if (targetCol != null)
+                    {
+                        Vector3 closestEdge = targetCol.ClosestPoint(transform.position);
+                        float distanceToEdge = Vector3.Distance(transform.position, closestEdge);
+
+                        if (distanceToEdge > attackRange)
+                        {
+                            nextStateCoroutine = ForwardCoroutine();
+                            yield break;
+                        }
+                    }
+                    else
+                    {
+                        nextStateCoroutine = ForwardCoroutine();
+                        yield break;
+                    }
+                    yield return new WaitForSeconds(attackDelay);
                     Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
                     targetUnit.TakeDamage(attackPower, enemyType);
-                    yield return new WaitForSeconds(attackCooldown);
+                    yield return new WaitForSeconds(attackCooldown - attackDelay);
                 }
                 else if (IsBase)
                 {
@@ -109,8 +128,9 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
+                    Debug.Log($"{this.name}이 {playerBase}에게 {attackPower}만큼 공격");
                     playerBase.BaseTakeDamage(attackPower);
-                    yield return new WaitForSeconds(attackCooldown);
+                    yield return new WaitForSeconds(attackCooldown - attackDelay);
                 }
                 else
                 {

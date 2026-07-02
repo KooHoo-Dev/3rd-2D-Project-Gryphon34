@@ -81,9 +81,10 @@ namespace Geometry
                     nextStateCoroutine = ScanCoroutine();
                     yield break;
                 }
+                yield return new WaitForSeconds(attackDelay);
                 Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
                 targetEnemy.TakeDamage(attackPower, myType);
-                yield return new WaitForSeconds(attackCooldown);
+                yield return new WaitForSeconds(attackCooldown - attackDelay);
             }
         }
 

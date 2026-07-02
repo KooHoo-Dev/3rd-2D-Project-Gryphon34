@@ -12,11 +12,11 @@ namespace iBetaGames
         public float speed;
 
 
-        public void Shoot()
-        {
-            BulletController bulletController = Instantiate(prefabs[Random.Range(0, 4)], point.position, Quaternion.identity).GetComponent<BulletController>();
-            bulletController.speed = speed;
-        }
+     // public void Shoot()
+     //{
+     //       BulletController bulletController = Instantiate(prefabs[Random.Range(0, 4)], point.position, Quaternion.identity).GetComponent<BulletController>();
+     //     bulletController.speed = speed;
+     //   }
 
 
     }
