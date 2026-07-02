@@ -27,6 +27,28 @@ namespace Geometry
         public float current_Hp;
         public float current_Morale;
 
+        private Transform hpBar;
+        private float standardX;
+        private float standardY;
+
+        protected virtual void Awake()
+        {
+            hpBar = transform.Find("helathBar");
+            standardX = hpBar.transform.localScale.x;
+            standardY = hpBar.transform.localScale.y;
+            current_Hp = maxHp;
+            current_Morale = maxMorale;
+        }
+
+        public void updateHpBar()
+        {
+            if (hpBar != null)
+            {
+                float hpRatio = current_Hp / maxHp;
+                hpBar.transform.localScale = new Vector3(hpRatio* standardX, standardY, 1f);
+            }
+        }
+
 
         public virtual void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {

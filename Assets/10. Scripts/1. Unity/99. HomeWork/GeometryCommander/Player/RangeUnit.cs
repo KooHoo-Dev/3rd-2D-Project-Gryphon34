@@ -14,6 +14,7 @@ namespace Geometry
                 Debug.Log($"{this.name} 사망");
                 PlayerManager.Instance.Dead(this);
             }
+            updateHpBar();
         }
 
         private void OnEnable()

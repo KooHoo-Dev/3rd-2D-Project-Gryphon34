@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace Geometry
@@ -11,9 +12,9 @@ namespace Geometry
 
         public int spawnCount = 3;
 
-        public Transform deafultPos;
+        public Transform defaultPos;
         private Vector3 spawnPos;
-
+        public float gap = 2f;
         [SerializeField]
         private GameObject[] spawnList;
 
@@ -27,28 +28,22 @@ namespace Geometry
             StopAllCoroutines();
         }
 
-        private void SetSpawnPos()
-        {
-            // 일단 기준 위치를 지정
-            // 기준 위치에 +3.5, -3.5를 한 값을 생성
-            // 그것을 VEctor3로 지정
-            // 
-
-            float randNum = Random.Range(-3.5f, 3.5f);
-            spawnPos = deafultPos.transform.position + new Vector3(0, randNum, 0);
-        }
 
         private IEnumerator SpawnTimer()
         {
             while (true)
             {
+                
+
+                float startY = defaultPos.position.y;
+
                 for (int i = 0; i < spawnCount; ++i)
                 {
-                    SetSpawnPos();
                     int randNum = Random.Range(0, 3);
+                    Vector3 spawnPos = new Vector3(defaultPos.position.x, startY + (gap * i), defaultPos.position.z);
                     GameObject.Instantiate(spawnList[randNum], spawnPos, Quaternion.identity);
                 }
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(10f);
             }
         }
     }

@@ -317,7 +317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.SpawnManager
   spawnCount: 3
-  deafultPos: {fileID: 2059477852}
+  defaultPos: {fileID: 2059477852}
+  gap: 2.5
   spawnList:
   - {fileID: 7100632272512892128, guid: b585ea6fee4ec25468b0760a3459f445, type: 3}
   - {fileID: 8905176315231206617, guid: 11d866ae8c81ad14cb35181331a5e4e8, type: 3}
@@ -538,16 +539,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220673003}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.390303}
+  m_LocalRotation: {x: -0, y: -0, z: 0.009225663, w: 0.99995744}
+  m_LocalPosition: {x: 0, y: 0, z: -9.390301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1584342675}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.057}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 623.8093, y: -381.89014}
+  m_AnchoredPosition: {x: 609.3379, y: -381.8685}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &234987953
@@ -2122,16 +2123,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836746100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.390841}
+  m_LocalRotation: {x: -0, y: -0, z: 0.009225663, w: 0.99995744}
+  m_LocalPosition: {x: 0, y: 0, z: 9.390838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1584342675}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.057}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 622.19775, y: -303.11337}
+  m_AnchoredPosition: {x: 606.27325, y: -303.13483}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &836746102
@@ -2642,7 +2643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 8.1, y: 65.390015}
+  m_AnchoredPosition: {x: 8.1, y: 65.39014}
   m_SizeDelta: {x: 518.82, y: 235.25}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1315027209
@@ -2722,7 +2723,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1359869989}
   - component: {fileID: 1359869993}
-  - component: {fileID: 1359869992}
   - component: {fileID: 1359869991}
   - component: {fileID: 1359869990}
   m_Layer: 5
@@ -2795,25 +2795,6 @@ MonoBehaviour:
   enableHoverSound: 1
   enableClickSound: 0
   checkForInteraction: 1
---- !u!114 &1359869992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359869988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460f5344b1de4b94494a9df2d9fa9415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  enableSaving: 0
-  sliderTag: Tag Text
-  defaultValue: 1
-  usePercent: 1
-  showValue: 0
-  useRoundValue: 0
 --- !u!114 &1359869993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3918,7 +3899,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1719296685}
   - component: {fileID: 1719296689}
-  - component: {fileID: 1719296688}
   - component: {fileID: 1719296687}
   - component: {fileID: 1719296686}
   m_Layer: 5
@@ -3991,25 +3971,6 @@ MonoBehaviour:
   enableHoverSound: 1
   enableClickSound: 0
   checkForInteraction: 1
---- !u!114 &1719296688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719296684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460f5344b1de4b94494a9df2d9fa9415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  enableSaving: 0
-  sliderTag: Tag Text
-  defaultValue: 1
-  usePercent: 1
-  showValue: 0
-  useRoundValue: 0
 --- !u!114 &1719296689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4796,7 +4757,7 @@ Transform:
   m_GameObject: {fileID: 2059477851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.92497, y: 1.03404, z: 0}
+  m_LocalPosition: {x: 12.92497, y: -2.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4812,7 +4773,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2130709701}
   - component: {fileID: 2130709705}
-  - component: {fileID: 2130709704}
   - component: {fileID: 2130709703}
   - component: {fileID: 2130709702}
   m_Layer: 5
@@ -4885,25 +4845,6 @@ MonoBehaviour:
   enableHoverSound: 1
   enableClickSound: 0
   checkForInteraction: 1
---- !u!114 &2130709704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130709700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460f5344b1de4b94494a9df2d9fa9415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  enableSaving: 0
-  sliderTag: Tag Text
-  defaultValue: 1
-  usePercent: 1
-  showValue: 0
-  useRoundValue: 0
 --- !u!114 &2130709705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4965,7 +4906,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2135675459}
   - component: {fileID: 2135675463}
-  - component: {fileID: 2135675462}
   - component: {fileID: 2135675461}
   - component: {fileID: 2135675460}
   m_Layer: 5
@@ -5038,25 +4978,6 @@ MonoBehaviour:
   enableHoverSound: 1
   enableClickSound: 0
   checkForInteraction: 1
---- !u!114 &2135675462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135675458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460f5344b1de4b94494a9df2d9fa9415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  enableSaving: 0
-  sliderTag: Tag Text
-  defaultValue: 1
-  usePercent: 1
-  showValue: 0
-  useRoundValue: 0
 --- !u!114 &2135675463
 MonoBehaviour:
   m_ObjectHideFlags: 0

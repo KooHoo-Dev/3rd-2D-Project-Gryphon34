@@ -18,6 +18,7 @@ namespace Geometry
 
                 Destroy(gameObject);
             }
+            updateHpBar();
         }
 
         private void OnEnable()
@@ -48,8 +49,7 @@ namespace Geometry
                     yield break;
                 }
                 Vector3 dir = (basePos - enemyPos).normalized;
-                transform.up = dir;
-                transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+                transform.position = (transform.position + dir * moveSpeed * Time.deltaTime);
                 yield return null;
             }
         }

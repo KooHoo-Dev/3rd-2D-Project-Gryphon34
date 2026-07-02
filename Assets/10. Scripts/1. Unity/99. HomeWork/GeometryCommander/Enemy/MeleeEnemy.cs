@@ -5,6 +5,16 @@ namespace Geometry
 {
     public class MeleeEnemy : EnemyUnit
     {
+        public SpriteRenderer attackEffect;
+        private Color alphaValue;
+        protected override void Awake()
+        {
+            base.Awake();
+            alphaValue = attackEffect.color;
+            alphaValue.a = 0f;
+            attackEffect.color = alphaValue;
+        }
+
         private void Update()
         {
             if (current_Hp <= 0 && !IsDead)
@@ -15,6 +25,7 @@ namespace Geometry
 
                 Destroy(gameObject);
             }
+            updateHpBar();
         }
 
         private void OnEnable()
@@ -45,8 +56,7 @@ namespace Geometry
                     yield break;
                 }
                 Vector3 dir = (basePosition - enemyPos).normalized;
-                transform.up = dir;
-                transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+                transform.position = (transform.position + dir * moveSpeed * Time.deltaTime);
                 yield return null;
             }
         }
@@ -115,9 +125,13 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
+                    alphaValue.a = 1f;
+                    attackEffect.color = alphaValue;
                     yield return new WaitForSeconds(attackDelay);
+                    alphaValue.a = 0f;
                     Debug.Log($"{this.name}이 {targetUnit}에게 {attackPower}만큼 공격");
                     targetUnit.TakeDamage(attackPower, enemyType);
+                    attackEffect.color = alphaValue;
                     yield return new WaitForSeconds(attackCooldown - attackDelay);
                 }
                 else if (IsBase)
@@ -128,8 +142,14 @@ namespace Geometry
                         nextStateCoroutine = ForwardCoroutine();
                         yield break;
                     }
+                    alphaValue.a = 1f;
+                    attackEffect.color = alphaValue;
+                    yield return new WaitForSeconds(attackDelay);
+                    
+                    alphaValue.a = 0f;
                     Debug.Log($"{this.name}이 {playerBase}에게 {attackPower}만큼 공격");
                     playerBase.BaseTakeDamage(attackPower);
+                    attackEffect.color = alphaValue;
                     yield return new WaitForSeconds(attackCooldown - attackDelay);
                 }
                 else

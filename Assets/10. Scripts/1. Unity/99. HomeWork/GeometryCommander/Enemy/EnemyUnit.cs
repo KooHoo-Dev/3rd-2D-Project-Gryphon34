@@ -20,8 +20,8 @@ namespace Geometry
         [SerializeField] protected float attackCooldown;
         [SerializeField] protected float attackPower;
         [SerializeField] protected float maxHp;
-        [SerializeField] protected float moveSpeed;
-        [SerializeField] protected float viewAngle = 100f;
+        [SerializeField] protected float moveSpeed=2f;
+        [SerializeField] protected float viewAngle = 180f;
         [SerializeField] protected Base playerBase;
         [SerializeField] protected int reward = 5;
 
@@ -32,10 +32,26 @@ namespace Geometry
         protected bool IsBase;
         protected bool IsDead = false;
         public float current_Hp;
-        
-        public void Awake()
+        private Transform hpBar;
+        private float standardX;
+        private float standardY;
+
+        protected virtual void Awake()
         {
+            hpBar = transform.Find("helathBar");
+            standardX = hpBar.transform.localScale.x;
+            standardY = hpBar.transform.localScale.y;
             playerBase = GameObject.Find("Base").GetComponent<Base>();
+            current_Hp = maxHp;
+        }
+
+        public void updateHpBar()
+        {
+            if (hpBar != null)
+            {
+                float hpRatio = current_Hp / maxHp;
+                hpBar.transform.localScale = new Vector3(hpRatio* standardX, standardY, 1f);
+            }
         }
 
         public virtual void TakeDamage(float damage, PlayerManager.UnitType type)
