@@ -24,6 +24,7 @@ namespace Geometry
         [SerializeField] protected float viewAngle = 180f;
         [SerializeField] protected Base playerBase;
         [SerializeField] protected int reward = 5;
+        [SerializeField] protected SpriteRenderer enemyRenderer;
 
         protected IEnumerator nextStateCoroutine;
         public EnemyType enemyType;
@@ -36,13 +37,22 @@ namespace Geometry
         private float standardX;
         private float standardY;
 
+        public GameObject deadState;
+        protected Color a;
+
         protected virtual void Awake()
         {
+            a = enemyRenderer.color;
             hpBar = transform.Find("helathBar");
             standardX = hpBar.transform.localScale.x;
             standardY = hpBar.transform.localScale.y;
             playerBase = GameObject.Find("Base").GetComponent<Base>();
             current_Hp = maxHp;
+        }
+
+        private void Start()
+        {
+            deadState.SetActive(false);
         }
 
         public void updateHpBar()
@@ -57,6 +67,47 @@ namespace Geometry
         public virtual void TakeDamage(float damage, PlayerManager.UnitType type)
         {
 
+        }
+
+        protected void CheckPathBlock()
+        {
+            if (IsBlock == true || IsBase == true)
+            {
+                return;
+            }
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
+
+            Vector3 forwardDir = (playerBase.transform.position - transform.position).normalized;
+
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.GetComponent<EnemyUnit>())
+                {
+                    continue;
+                }
+                Vector3 dirToTarget = (hit.transform.position - transform.position).normalized;
+                if (Vector3.Angle(forwardDir, dirToTarget) < viewAngle / 2)
+                {
+                    if (hit.GetComponent<PlayerUnit>())
+                    {
+                        IsBlock = true;
+                        targetUnit = hit.GetComponent<PlayerUnit>();
+                        return;
+                    }
+                    else if (hit.GetComponent<Base>())
+                    {
+                        IsBase = true;
+                        return;
+                    }
+                }
+            }
+        }
+
+        public void DeadState()
+        {
+            a.a = 0f;
+            enemyRenderer.color = a;
+            deadState.SetActive(true);
         }
     }
 }

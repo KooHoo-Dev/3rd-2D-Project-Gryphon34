@@ -44,6 +44,7 @@ namespace Geometry
 
         public GameObject[] arrowPre;
 
+        public Collider2D spawnArea;
         public Transform arrowUI;
         private void Awake()
         {
@@ -201,7 +202,11 @@ namespace Geometry
 
             Vector3 worldMousePoint = Camera.main.ScreenToWorldPoint(mousePosition);
             worldMousePoint.z = transform.position.z; // z값을 보정
-                                                      // 마우스가 클릭한 곳에 소환
+            
+            if(spawnArea !=null && spawnArea.OverlapPoint(worldMousePoint) == false)
+            {
+                return;
+            }
 
             PlayerManager.UnitType unitType;
 
@@ -228,6 +233,7 @@ namespace Geometry
                     playerManager.UseCost(unitType);
                     break;
             }
+
             GameObject.Instantiate(spawn, worldMousePoint, Quaternion.identity);
             currentState = CommandState.Idle;
             commandList.Clear();

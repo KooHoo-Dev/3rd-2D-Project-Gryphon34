@@ -20,10 +20,9 @@ namespace Geometry
             if (current_Hp <= 0 && !IsDead)
             {
                 IsDead = true;
-                Debug.Log($"{enemyType} 사망");
+                StopAllCoroutines();
                 PlayerManager.Instance.AddCost(reward);
-
-                Destroy(gameObject);
+                DeadState();
             }
             updateHpBar();
         }
@@ -58,39 +57,6 @@ namespace Geometry
                 Vector3 dir = (basePosition - enemyPos).normalized;
                 transform.position = (transform.position + dir * moveSpeed * Time.deltaTime);
                 yield return null;
-            }
-        }
-
-        private void CheckPathBlock()
-        {
-            if (IsBlock == true || IsBase== true)
-            {
-                return;
-            }
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
-
-            foreach(Collider2D hit in hits)
-            {
-                if (hit.GetComponent<EnemyUnit>())
-                {
-                    continue;
-                }
-                Vector3 dirToTarget = (hit.transform.position - transform.position).normalized;
-                if (Vector3.Angle(transform.up,dirToTarget) < viewAngle / 2)
-                {
-                    if (hit.GetComponent<PlayerUnit>())
-                    {
-                        IsBlock = true;
-                        targetUnit = hit.GetComponent<PlayerUnit>();
-                        return;
-                    }
-                    else if(hit.GetComponent<Base>())
-                    {
-                        IsBase = true;
-                        playerBase = hit.GetComponent<Base>();
-                        return;
-                    }
-                }
             }
         }
 

@@ -12,6 +12,15 @@ namespace Geometry
         [SerializeField] private PlayerManager playerManager;
         public bool IsgameOver = false;
         public bool IsgameClear = false;
+        public GameObject clearUI;
+        public GameObject failUI;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            clearUI.SetActive(false);
+            failUI.SetActive(false);
+        }
 
         private void Update()
         {
@@ -33,13 +42,10 @@ namespace Geometry
         {
             if (IsgameClear || IsgameOver) return;
             IsgameClear=true;
-            EnemyUnit[] enemies =FindObjectsByType<EnemyUnit>(FindObjectsSortMode.None);
-            foreach(EnemyUnit enemy in enemies)
-            {
-                Destroy(enemy.gameObject);
-            }
+            
 
             StopSystem();
+            clearUI.SetActive(true);
         }
 
         public void GameOver()
@@ -47,17 +53,20 @@ namespace Geometry
             if (IsgameClear || IsgameOver) return;
             IsgameOver = true;
 
-            if(playerBase != null) Destroy(playerBase.gameObject);
-
-            PlayerUnit[] units = FindObjectsByType<PlayerUnit>(FindObjectsSortMode.None);
-            foreach(PlayerUnit unit in units) Destroy(unit.gameObject);
-
             StopSystem();
-
+            failUI.SetActive(true);
         }
 
         public void StopSystem()
         {
+            EnemyUnit[] enemies = FindObjectsByType<EnemyUnit>(FindObjectsSortMode.None);
+            foreach (EnemyUnit enemy in enemies) Destroy(enemy.gameObject);
+
+            if (playerBase != null) Destroy(playerBase.gameObject);
+
+            PlayerUnit[] units = FindObjectsByType<PlayerUnit>(FindObjectsSortMode.None);
+            foreach (PlayerUnit unit in units) Destroy(unit.gameObject);
+
             if (commandSystem != null) commandSystem.enabled = false;
 
             if (spawnManager != null) spawnManager.enabled = false;

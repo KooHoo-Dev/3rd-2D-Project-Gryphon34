@@ -26,6 +26,7 @@ namespace Geometry
                     if(enemy !=null && alreadyDamaged.Contains(enemy) == false)
                     {
                         enemy.TakeDamage(attackPower, myType);
+                        Debug.Log($"SupportUnit이 {enemy.name}을 공격");
                         alreadyDamaged.Add(enemy);
                     }
                 }

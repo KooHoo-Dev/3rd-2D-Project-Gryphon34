@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Geometry
 {
@@ -11,24 +12,26 @@ namespace Geometry
         public TextMeshProUGUI supplyText;
         public TextMeshProUGUI costText;
         public TextMeshProUGUI goalTimeText;
+        public TextMeshProUGUI TimeText;
         public Slider triangleCooldown;
         public Slider circleCooldown;
         public Slider squareCooldown;
         public Slider supportCooldown;
 
-        private PlayerManager.UnitType currentUnitType;
 
         void Update()
         {
-            if(PlayerManager.Instance != null)
+            if(playerManager != null&&gameManager !=null)
             {
+                if (gameManager.IsgameOver)
+                {
+                    TimeText.text = goalTimeText.text;
+                }
                 supplyText.text = $"Supply : {playerManager.currentSupply} / {playerManager.maxSupply}";
 
                 costText.text = $"Cost : {playerManager.currentCost} / {playerManager.maxCost}";
 
-                goalTimeText.text = $"Goal Time : {(int)gameManager.goalTime}";
-
-
+                goalTimeText.text = $"Time Left : {(int)gameManager.goalTime}";
 
                 // 1. Triangle 쿨타임 업데이트
                 if (playerManager.UnitCooldownDic.TryGetValue(PlayerManager.UnitType.Triangle, out float triProgress))
@@ -56,6 +59,10 @@ namespace Geometry
             }
         }
 
+        public void OnButtonClick()
+        {
+            SceneManager.LoadScene("01. MainMenu");
+        }
         
     }
 }

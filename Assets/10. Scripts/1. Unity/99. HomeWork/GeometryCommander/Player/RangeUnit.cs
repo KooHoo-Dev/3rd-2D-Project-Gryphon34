@@ -9,10 +9,11 @@ namespace Geometry
         [SerializeField] private GameObject bulletPrefab;
         private void Update()
         {
-            if (current_Hp <= 0)
+            if (current_Hp <= 0&& !isDead)
             {
-                Debug.Log($"{this.name} 사망");
-                PlayerManager.Instance.Dead(this);
+                isDead = true;
+                StopAllCoroutines();
+                DeadState();
             }
             updateHpBar();
         }
@@ -24,7 +25,7 @@ namespace Geometry
 
         private IEnumerator FiniteStateMachineCoroutine()
         {
-            nextStateCoroutine = ScanCoroutine();
+            nextStateCoroutine = SpawnCoroutine();
 
             while (gameObject.activeInHierarchy)
             {
@@ -32,6 +33,12 @@ namespace Geometry
             }
         }
 
+        private IEnumerator SpawnCoroutine()
+        {
+            yield return new WaitForSeconds(0.5f);
+            fordRenderer.enabled = false;
+            nextStateCoroutine= ScanCoroutine();
+        }
         private IEnumerator ScanCoroutine()
         {
             while (true)

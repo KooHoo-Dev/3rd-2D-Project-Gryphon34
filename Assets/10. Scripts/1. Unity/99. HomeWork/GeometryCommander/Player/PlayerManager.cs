@@ -51,10 +51,6 @@ namespace Geometry
         [Header("자원 획득")]
         [SerializeField] private int costPerSecond = 1;
 
-
-        // 인구수는 MaxSupply가 있고 이거를 넘어가면 안됨
-        // currentSupply는 0으로 시작해서 소환 할때 마다 인구수가 추가되는거임
-
         private void Start()
         {
             StartCoroutine(PassiveCostRooutine());
@@ -180,6 +176,11 @@ namespace Geometry
         {
             int supply = GetSupply(unit.myType);
             currentSupply-=supply;
+            Destroy(unit.gameObject);
+        }
+
+        public void Dead(EnemyUnit unit)
+        {
             Destroy(unit.gameObject);
         }
     }

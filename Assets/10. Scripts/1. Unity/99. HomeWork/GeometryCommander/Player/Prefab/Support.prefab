@@ -47,14 +47,18 @@ MonoBehaviour:
   attackRange: 3
   scanCooldown: 0
   attackCooldown: 5
-  attackPower: 50
+  attackDelay: 0
+  attackPower: 100
   maxHp: 1
   maxMorale: 1
   targetLayer:
     serializedVersion: 2
     m_Bits: 256
+  unitRenderer: {fileID: 0}
+  fordRenderer: {fileID: 0}
   myType: 12
   targetEnemy: {fileID: 0}
   current_Hp: 1
   current_Morale: 1
+  deadState: {fileID: 0}
   duration: 3
