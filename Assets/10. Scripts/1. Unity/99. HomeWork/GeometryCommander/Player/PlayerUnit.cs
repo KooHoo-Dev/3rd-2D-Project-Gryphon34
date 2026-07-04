@@ -42,7 +42,7 @@ namespace Geometry
             current_Hp = maxHp;
             current_Morale = maxMorale;
         }
-        private void Start()
+        protected virtual void Start()
         {
             deadState.SetActive(false);
         }

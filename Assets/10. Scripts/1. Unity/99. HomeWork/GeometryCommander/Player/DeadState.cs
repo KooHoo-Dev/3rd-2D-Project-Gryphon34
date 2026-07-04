@@ -12,7 +12,7 @@ namespace Geometry
 
         public IEnumerator DeadAnim()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             PlayerUnit unit = GetComponentInParent<PlayerUnit>();
             if(unit != null)
             {
