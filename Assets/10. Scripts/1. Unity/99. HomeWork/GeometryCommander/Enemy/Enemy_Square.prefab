@@ -100,8 +100,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8730097312158735157}
-  - component: {fileID: 7512862278644238719}
   - component: {fileID: 4624472336253296597}
+  - component: {fileID: 6529967029243635508}
   - component: {fileID: 7723427440814985789}
   m_Layer: 0
   m_Name: DeadState
@@ -125,18 +125,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4330581053793575269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7512862278644238719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2491183292589708084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbeb6c9f82ad4df49a7d53c2196992ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Geometry.DeadState
 --- !u!95 &4624472336253296597
 Animator:
   serializedVersion: 7
@@ -159,6 +147,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6529967029243635508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2491183292589708084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d41bd80de249a46aefdc9127ddf470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Geometry.EnemyDeadState
 --- !u!212 &7723427440814985789
 SpriteRenderer:
   serializedVersion: 2

@@ -45,6 +45,7 @@ namespace Geometry
         private IEnumerator SpawnCoroutine()
         {
             yield return new WaitForSeconds(0.5f);
+            unitRenderer.enabled = true;
             fordRenderer.enabled = false;
             nextStateCoroutine = ScanCoroutine();
         }

@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Geometry
 {
@@ -32,6 +33,7 @@ namespace Geometry
 
         protected virtual void Awake()
         {
+            unitRenderer.enabled = false;
             fordRenderer.enabled = true;
             a= unitRenderer.color;
             hpBar = transform.Find("helathBar");
@@ -60,7 +62,7 @@ namespace Geometry
 
         }
 
-        public void DeadState()
+        protected virtual void DeadState()
         {
             a.a = 0f;
             unitRenderer.color = a;

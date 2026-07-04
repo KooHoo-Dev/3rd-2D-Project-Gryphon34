@@ -33,8 +33,7 @@ namespace Geometry
         {
             while (true)
             {
-                
-
+                yield return new WaitForSeconds(2f);
                 float startY = defaultPos.position.y;
 
                 for (int i = 0; i < spawnCount; ++i)

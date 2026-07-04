@@ -7,6 +7,11 @@ namespace Geometry
     public class SupportUnit : PlayerUnit
     {
         [SerializeField] private float duration = 3f;
+
+        protected override void Awake()
+        {
+
+        }
         private void OnEnable()
         {
             StartCoroutine(AttackCoroutine());
@@ -33,7 +38,11 @@ namespace Geometry
                 timer += Time.deltaTime;
                 yield return null;
             }
-            Destroy(gameObject);
+        }
+
+        protected override void DeadState()
+        {
+            
         }
 
         private void OnDrawGizmosSelected()
