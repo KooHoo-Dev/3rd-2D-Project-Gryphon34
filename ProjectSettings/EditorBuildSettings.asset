@@ -9,10 +9,7 @@ EditorBuildSettings:
     path: Assets/00. Study/99. HomeWork/GeometryCommander/00. MainMenu.unity
     guid: db746753a2497904990d4d5d9ddcf004
   - enabled: 1
-    path: Assets/00. Study/99. HomeWork/GeometryCommander/01. Info.unity
-    guid: 94ebdb65c47c5f842959fda651a828e3
-  - enabled: 1
-    path: Assets/00. Study/99. HomeWork/GeometryCommander/02. Game.unity
+    path: Assets/00. Study/99. HomeWork/GeometryCommander/01. Game.unity
     guid: 1f7cc81b837574244b1ad7d7c08a2657
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
