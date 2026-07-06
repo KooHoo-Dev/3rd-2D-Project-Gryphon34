@@ -13,8 +13,7 @@ namespace Geometry
 
         protected override void Awake()
         {
-            // 범위를 나타내는 원이 있고 그 원과 이펙트가 같이 나타나도록 구현
-            // 그러려면 처음에 서포트 유닛이 켜지면 범위를 나타내는
+           
         }
 
         protected override void Start()
@@ -23,7 +22,7 @@ namespace Geometry
             isDead = false;
         }
 
-        private void Update()
+        protected override void Update()
         {
             if (isDead)
             {
@@ -59,7 +58,7 @@ namespace Geometry
                    EnemyUnit enemy = collider.gameObject.GetComponent<EnemyUnit>();
                     if(enemy !=null && alreadyDamaged.Contains(enemy) == false)
                     {
-                        enemy.TakeDamage(attackPower, myType);
+                        enemy.TakeDamage(attackPower, myType,this);
                         Debug.Log($"SupportUnit이 {enemy.name}을 공격");
                         alreadyDamaged.Add(enemy);
                     }
@@ -69,7 +68,6 @@ namespace Geometry
                 dropTimer-= Time.deltaTime;
                 yield return null;
             }
-            Destroy(gameObject);
             isDead = true;
             yield break;
         }

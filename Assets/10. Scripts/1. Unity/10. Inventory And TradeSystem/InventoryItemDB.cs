@@ -1,7 +1,6 @@
 using Jay;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 namespace Study_Inventory
 {

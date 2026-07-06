@@ -181,6 +181,9 @@ namespace Geometry
 
         public void Dead(EnemyUnit unit)
         {
+            // 내가 공격한 적을 죽였다고 어떻게 알릴수 있을까?
+            // 여기서 죽었다를 판단하지만..정작 공격한 나는 판단할 수 없잖아.
+            
             Destroy(unit.gameObject);
         }
     }

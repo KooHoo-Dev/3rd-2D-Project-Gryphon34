@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static Geometry.EnemyUnit;
 
 namespace Geometry
@@ -16,16 +17,6 @@ namespace Geometry
             attackEffect.color = alphaValue;
         }
 
-        private void Update()
-        {
-            if (current_Hp <= 0&& !isDead)
-            {
-                isDead = true;
-                StopAllCoroutines();
-                DeadState();
-            }
-            updateHpBar();
-        }
 
         private void OnEnable()
         {
@@ -104,7 +95,7 @@ namespace Geometry
                 
                 alphaValue.a = 0f;
                 Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
-                targetEnemy.TakeDamage(attackPower, myType);
+                targetEnemy.TakeDamage(attackPower, myType, this);
                 attackEffect.color = alphaValue;
                 yield return new WaitForSeconds(attackCooldown - attackDelay);
             }
@@ -142,6 +133,7 @@ namespace Geometry
         public override void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {
             float addDamage = 1.0f;
+            float moraleDamage = 5.0f;
             if (myType == PlayerManager.UnitType.Circle)
             {
                 // 네모, 세모만
@@ -168,6 +160,7 @@ namespace Geometry
             }
             //Debug.Log($"{this.name}이 {type}에게 {damage * addDamage}만큼 공격 받음");
             current_Hp -= damage * addDamage;
+            current_Morale -= moraleDamage * addDamage;
         }
 
         private void OnDrawGizmos()

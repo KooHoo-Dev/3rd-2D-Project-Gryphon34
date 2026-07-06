@@ -23,8 +23,10 @@ namespace Geometry
             Commanding,
             Spawning
         }
+        
 
         private int count = 0;
+        private bool IsSupport = false;
 
         private CommandState currentState = CommandState.Idle;
         private Arrow[] arrows = new Arrow[4];
@@ -35,7 +37,7 @@ namespace Geometry
         private List<Image> spawnedArrowImages = new List<Image>();
 
         public PlayerManager playerManager;
-        
+
         private GameObject spawn;
         public GameObject trianglePre;
         public GameObject circlePre;
@@ -45,6 +47,9 @@ namespace Geometry
         public GameObject[] arrowPre;
 
         public Collider2D spawnArea;
+
+        public SpriteRenderer supportRadius;
+
         public Transform arrowUI;
         private void Awake()
         {
@@ -52,6 +57,8 @@ namespace Geometry
             arrows[1] = Arrow.Down;
             arrows[2] = Arrow.Left;
             arrows[3] = Arrow.Right;
+
+            supportRadius.enabled = false;
         }
 
         private void Update()
@@ -64,10 +71,25 @@ namespace Geometry
                     PlayerCommand();
                     break;
                 case CommandState.Spawning:
+                    Vector2 mousePosition = SimpleInput.GetMousePosition();
+                    Vector3 worldMousePoint = Camera.main.ScreenToWorldPoint(mousePosition);
+                    worldMousePoint.z = transform.position.z;
+
+                    if (IsSupport&&supportRadius!=null)
+                    {
+                        supportRadius.enabled = true;
+                        supportRadius.transform.position = worldMousePoint;
+                    }
+
                     if (Mouse.current.leftButton.wasPressedThisFrame)
                     {
                         spawnedArrowImages.Clear();
-                        SetSpawnPosition();
+                        SetSpawnPosition(worldMousePoint);
+                        if (currentState == CommandState.Idle)
+                        {
+                            IsSupport = false;
+                            supportRadius.enabled = false;
+                        }
                     }
                     break;
             }
@@ -94,7 +116,7 @@ namespace Geometry
         public void OnSquareClick()
         {
             spawnType = PlayerManager.UnitType.Square;
-            
+
             if (CheckCondition(spawnType) == false) return;
 
             InitialCommand(spawnType);
@@ -104,6 +126,7 @@ namespace Geometry
         public void OnSupportClick()
         {
             spawnType = PlayerManager.UnitType.Support;
+            IsSupport = true;
             // 자원과 쿨타임 체크 로직
             if (CheckCondition(spawnType) == false) return;
 
@@ -193,17 +216,9 @@ namespace Geometry
             Debug.Log($"{string.Join(",", commandList)}");
         }
 
-        private void SetSpawnPosition()
+        private void SetSpawnPosition(Vector3 worldMousePoint)
         {
-            Vector2 mousePosition = SimpleInput.GetMousePosition();
-
-            // 화면 좌표계에서 World(Scene)의 좌표계로 전환합니다.
-            // 전환 할 때는 Camera의 기능을 이용합니다.
-
-            Vector3 worldMousePoint = Camera.main.ScreenToWorldPoint(mousePosition);
-            worldMousePoint.z = transform.position.z; // z값을 보정
-            
-            if(spawnArea !=null && spawnArea.OverlapPoint(worldMousePoint) == false)
+            if (spawnArea != null && spawnArea.OverlapPoint(worldMousePoint) == false)
             {
                 return;
             }
@@ -233,6 +248,17 @@ namespace Geometry
                     playerManager.UseCost(unitType);
                     break;
             }
+            Collider2D[] hitUnits = Physics2D.OverlapBoxAll(spawnArea.bounds.center, spawnArea.bounds.size, 360f);
+
+            foreach(Collider2D collider in hitUnits)
+            {
+                PlayerUnit targetUnit = collider.GetComponent<PlayerUnit>();
+
+                if(targetUnit !=null && targetUnit.current_Hp > 0)
+                {
+                    targetUnit.current_Morale += 10.0f;
+                }
+            }
 
             GameObject.Instantiate(spawn, worldMousePoint, Quaternion.identity);
             currentState = CommandState.Idle;
@@ -257,6 +283,6 @@ namespace Geometry
                 spawnedArrowImages.Add(newArrow.GetComponent<Image>());
             }
         }
-
+    
     }
 }

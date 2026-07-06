@@ -5,11 +5,15 @@ namespace Geometry
 {
     public class MainMenu : MonoBehaviour
     {
-        public void OnClickButton()
+        public void OnInfoClickButton()
         {
+            SceneManager.LoadScene("01. Info");
+        }
 
-            SceneManager.LoadScene("00. Game");
-}
+        public void OnGameClickButton()
+        {
+            SceneManager.LoadScene("02. Game");
+        }
     }
 }
 

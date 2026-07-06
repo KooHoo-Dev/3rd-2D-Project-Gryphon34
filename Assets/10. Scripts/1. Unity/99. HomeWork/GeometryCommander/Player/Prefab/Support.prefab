@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_Sprite: {fileID: 21300000, guid: 24de22fe090ea2a4b932c13f1b3be37d, type: 3}
   m_Color: {r: 1, g: 0.48584908, b: 0.48584908, a: 1}
   m_FlipX: 0
@@ -201,3 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbeb6c9f82ad4df49a7d53c2196992ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.DeadState
+  unitLayer:
+    serializedVersion: 2
+    m_Bits: 0

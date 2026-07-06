@@ -7,16 +7,7 @@ namespace Geometry
     public class RangeUnit : PlayerUnit
     {
         [SerializeField] private GameObject bulletPrefab;
-        private void Update()
-        {
-            if (current_Hp <= 0&& !isDead)
-            {
-                isDead = true;
-                StopAllCoroutines();
-                DeadState();
-            }
-            updateHpBar();
-        }
+
 
         private void OnEnable()
         {
@@ -107,7 +98,7 @@ namespace Geometry
                 bullet.SetTarget(targetEnemy.gameObject, right);
                 yield return new WaitForSeconds(attackDelay);
                 Debug.Log($"{this.name}이 {targetEnemy}에게 {attackPower}만큼 공격");
-                targetEnemy.TakeDamage(attackPower, myType);
+                targetEnemy.TakeDamage(attackPower, myType, this);
                 yield return new WaitForSeconds(attackCooldown-attackDelay);
             }
         }

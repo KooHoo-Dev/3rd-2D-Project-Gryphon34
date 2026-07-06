@@ -31,7 +31,7 @@ namespace Geometry
         public PlayerUnit targetUnit;
         protected bool IsBlock;
         protected bool IsBase;
-        protected bool IsDead = false;
+        public bool IsDead = false;
         public float current_Hp;
         private Transform hpBar;
         private float standardX;
@@ -64,7 +64,7 @@ namespace Geometry
             }
         }
 
-        public virtual void TakeDamage(float damage, PlayerManager.UnitType type)
+        public virtual void TakeDamage(float damage, PlayerManager.UnitType type, PlayerUnit attacker)
         {
 
         }

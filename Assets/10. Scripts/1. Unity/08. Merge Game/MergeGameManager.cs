@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.AnimatedValues;
-using UnityEditor.Experimental.GraphView;
 
 namespace Study.MergeGame
 {

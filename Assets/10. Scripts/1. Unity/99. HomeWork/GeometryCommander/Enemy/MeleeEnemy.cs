@@ -126,7 +126,7 @@ namespace Geometry
             }
         }
 
-        public override void TakeDamage(float damage, PlayerManager.UnitType type)
+        public override void TakeDamage(float damage, PlayerManager.UnitType type, PlayerUnit attacker)
         {
             float addDamage = 1.0f;
             if (enemyType == EnemyType.Circle)
@@ -155,6 +155,11 @@ namespace Geometry
             }
             Debug.Log($"{enemyType}이 {type}에게 {damage*addDamage}만큼 공격 받음");
             current_Hp -=damage*addDamage;
+
+            if(current_Hp<=0 && !IsDead)
+            {
+                attacker.current_Morale += 10.0f;
+            }
         }
 
         private void OnDrawGizmos()

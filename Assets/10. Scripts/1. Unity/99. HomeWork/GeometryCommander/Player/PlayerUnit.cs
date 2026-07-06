@@ -27,8 +27,11 @@ namespace Geometry
         protected Color a;
 
         private Transform hpBar;
-        private float standardX;
-        private float standardY;
+        private Transform moraleBar;
+        private float hpStandardX;
+        private float moraleStandardX;
+        private float hpStandardY;
+        private float moraleStandardY;
         protected bool isDead = false;
 
         protected virtual void Awake()
@@ -37,8 +40,11 @@ namespace Geometry
             fordRenderer.enabled = true;
             a= unitRenderer.color;
             hpBar = transform.Find("helathBar");
-            standardX = hpBar.transform.localScale.x;
-            standardY = hpBar.transform.localScale.y;
+            moraleBar = transform.Find("moraleBar");
+            hpStandardX = hpBar.transform.localScale.x;
+            moraleStandardX = moraleBar.transform.localScale.x;
+            hpStandardY = hpBar.transform.localScale.y;
+            moraleStandardY = moraleBar.transform.localScale.y;
             current_Hp = maxHp;
             current_Morale = maxMorale;
         }
@@ -47,15 +53,40 @@ namespace Geometry
             deadState.SetActive(false);
         }
 
+        protected virtual void Update()
+        {
+            if (current_Morale >= maxMorale)
+            {
+                current_Morale=maxMorale;
+            }
+
+            if ((current_Hp <= 0 || current_Morale <= 0) && !isDead)
+            {
+                isDead = true;
+                StopAllCoroutines();
+                DeadState();
+            }
+            updateHpBar();
+            updateMoraleBar();
+        }
+
         public void updateHpBar()
         {
             if (hpBar != null)
             {
                 float hpRatio = current_Hp / maxHp;
-                hpBar.transform.localScale = new Vector3(hpRatio* standardX, standardY, 1f);
+                hpBar.transform.localScale = new Vector3(hpRatio* hpStandardX, hpStandardY, 1f);
             }
         }
 
+        public void updateMoraleBar()
+        {
+            if(moraleBar != null)
+            {
+                float moraleRatio = current_Morale / maxMorale;
+                moraleBar.transform.localScale = new Vector3(moraleRatio * moraleStandardX, moraleStandardY, 1f);
+            }
+        }
 
         public virtual void TakeDamage(float damage, EnemyUnit.EnemyType type)
         {

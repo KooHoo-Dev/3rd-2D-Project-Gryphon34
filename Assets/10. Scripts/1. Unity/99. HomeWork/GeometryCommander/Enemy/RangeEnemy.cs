@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 
@@ -117,7 +116,7 @@ namespace Geometry
             }
         }
 
-        public override void TakeDamage(float damage, PlayerManager.UnitType type)
+        public override void TakeDamage(float damage, PlayerManager.UnitType type, PlayerUnit attacker)
         {
             float addDamage = 1.0f;
             if (type == PlayerManager.UnitType.Circle)
@@ -129,6 +128,7 @@ namespace Geometry
                 addDamage = 2.0f;
             }
             current_Hp -= damage * addDamage;
+            if (current_Hp <= 0 && !IsDead) attacker.current_Morale += 10.0f;
         }
 
         private void OnDrawGizmos()
