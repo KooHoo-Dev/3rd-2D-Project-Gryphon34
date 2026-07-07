@@ -61,7 +61,7 @@ namespace Geometry
 
         public void OnButtonClick()
         {
-            SceneManager.LoadScene("01. MainMenu");
+            SceneManager.LoadScene("00. MainMenu");
         }
         
     }

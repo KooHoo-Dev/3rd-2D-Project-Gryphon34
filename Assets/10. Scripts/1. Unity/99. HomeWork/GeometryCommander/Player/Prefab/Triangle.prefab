@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ceb62213d3dc034ba5d10bef9c56112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeUnit
-  attackRange: 3
+  attackRange: 2.8
   scanCooldown: 0.2
   attackCooldown: 2
   attackDelay: 0.5
-  attackPower: 5
+  attackPower: 7
   maxHp: 70
   maxMorale: 100
   targetLayer:

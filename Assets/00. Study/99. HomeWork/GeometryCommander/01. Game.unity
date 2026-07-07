@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -25.000008, y: 0}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 15, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &163317970
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.SpawnManager
   spawnCount: 3
   defaultPos: {fileID: 2059477852}
-  gap: 2.5
+  gap: 2.3
   spawnList:
   - {fileID: 7100632272512892128, guid: b585ea6fee4ec25468b0760a3459f445, type: 3}
   - {fileID: 8905176315231206617, guid: 11d866ae8c81ad14cb35181331a5e4e8, type: 3}
@@ -1414,13 +1414,13 @@ MonoBehaviour:
   <currentCost>k__BackingField: 50
   <maxSupply>k__BackingField: 20
   <currentSupply>k__BackingField: 0
-  TriangleCost: 10
+  TriangleCost: 12
   CircleCost: 15
-  SquareCost: 20
-  SupportCost: 25
-  TriangleSupply: 2
-  CircleSupply: 4
-  SquareSupply: 6
+  SquareCost: 22
+  SupportCost: 30
+  TriangleSupply: 4
+  CircleSupply: 6
+  SquareSupply: 8
   costPerSecond: 1
 --- !u!4 &234987955
 Transform:
@@ -1472,7 +1472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -25.000008, y: 0}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 15, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &257461799
@@ -2950,7 +2950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost : 20
+  m_text: 'Cost : 22
 
     Sup = 6'
   m_isRightToLeft: 0
@@ -3780,7 +3780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -25.000008, y: 0}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 15, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &708226436
@@ -5238,7 +5238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost : 25'
+  m_text: 'Cost : 30'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b04f3173f946b754db673ac13842f4c1, type: 2}
   m_sharedMaterial: {fileID: 21728410361126204, guid: b04f3173f946b754db673ac13842f4c1, type: 2}
@@ -7724,7 +7724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -25.000008, y: 0}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 15, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1390685316
@@ -8515,7 +8515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost : 10
+  m_text: 'Cost : 12
 
     Sup = 2'
   m_isRightToLeft: 0
@@ -9930,8 +9930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5d1d9d4b10756448a059a80b5ae311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Base
-  maxHp: 200
-  currentHp: 200
+  maxHp: 400
+  currentHp: 400
   hpBar: {fileID: 615484598}
 --- !u!212 &1950823722
 SpriteRenderer:

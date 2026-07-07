@@ -556,10 +556,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.MeleeEnemy
   attackRange: 1
-  attackDelay: 0.5
-  attackCooldown: 2
-  attackPower: 8
-  maxHp: 120
+  attackDelay: 0.3
+  attackCooldown: 1.5
+  attackPower: 7
+  maxHp: 130
   moveSpeed: 1
   viewAngle: 180
   playerBase: {fileID: 0}
@@ -567,6 +567,7 @@ MonoBehaviour:
   enemyRenderer: {fileID: 475668457303281653}
   enemyType: 2
   targetUnit: {fileID: 0}
-  current_Hp: 120
+  IsDead: 0
+  current_Hp: 130
   deadState: {fileID: 2491183292589708084}
   attackEffect: {fileID: 8179747100218189458}

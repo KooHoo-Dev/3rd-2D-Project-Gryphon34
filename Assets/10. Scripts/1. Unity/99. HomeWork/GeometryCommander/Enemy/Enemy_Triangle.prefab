@@ -327,9 +327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.RangeEnemy
   attackRange: 2
-  attackDelay: 0.5
-  attackCooldown: 2
-  attackPower: 4
+  attackDelay: 0.3
+  attackCooldown: 1.5
+  attackPower: 6
   maxHp: 60
   moveSpeed: 1
   viewAngle: 180
@@ -338,6 +338,7 @@ MonoBehaviour:
   enemyRenderer: {fileID: 2520504091838886045}
   enemyType: 0
   targetUnit: {fileID: 0}
+  IsDead: 0
   current_Hp: 60
   deadState: {fileID: 4713666220172766890}
   bulletPrefab: {fileID: 8380417184654902910, guid: e172550658e23214dbb6485f6455a64d, type: 3}
