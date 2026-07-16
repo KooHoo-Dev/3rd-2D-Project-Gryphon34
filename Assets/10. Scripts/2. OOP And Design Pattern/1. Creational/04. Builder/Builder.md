@@ -73,6 +73,9 @@ Sword gungnir = new SwordBuilder()
     .AddOption("+50% Hp Regen")
     .Build();
 ```
+> 필요한 옵션만 골라 조립하게 되어
+> `가독성`이 상승한다.
+> 같은 빌더를 사용해서 `다양한 결과물을 생성`할 수 있다.
 
 
 
