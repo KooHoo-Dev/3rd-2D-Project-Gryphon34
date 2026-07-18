@@ -6627,7 +6627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Geometry.GameManager
   playerBase: {fileID: 1950823721}
-  goalTime: 180
+  goalTime: 5
   commandSystem: {fileID: 1390242984}
   spawnManager: {fileID: 175524832}
   playerManager: {fileID: 234987954}
