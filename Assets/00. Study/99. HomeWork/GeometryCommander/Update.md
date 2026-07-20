@@ -43,8 +43,6 @@ flowchart TB
     G --> D
 ```
 ## 4. 화면 기획
-![img_1.png](img_1.png)
-![img.png](img.png)
 
 ## 화면 1: 스테이지 클리어 보상 및 신규 유닛 획득 화면
 이 화면은 스테이지를 클리어한 플레이어에게 제공되는 보상과 새로 획득한 유닛을 보여주는 팝업창입니다.
@@ -76,11 +74,8 @@ flowchart TB
 - 현재 게임 아트스타일은 네온으로 기하학적인 SF적인 스타일입니다.
 - 전장의 깊이감이 부족하여 전장 상환판에 그리드와 지형의 높낮이는 시각적으로 보여주는 등고선을 추가하면 좋을것 같습니다.
 ### 레퍼런스
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
 - https://store.steampowered.com/app/531510/Just_Shapes__Beats/
 - https://www.scienceall.com/brd/board/390/L/menu/317?brdType=R&bbsSn=186147
-![img_4.png](img_4.png)
 - AI 생성
 ### 적용 대상
 - 전장 상황판에 등고선과 그리드를 적용해 높낮이와 단조로움을 없앱니다.
