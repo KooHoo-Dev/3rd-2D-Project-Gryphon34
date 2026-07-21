@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Study.Utilities;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
 namespace Study_OOP_And_Design_Pattern.Creational.Builder
@@ -128,7 +124,7 @@ namespace Study_OOP_And_Design_Pattern.Creational.Builder
             return grade switch
             {
                 Grade.Legendary => LegendaryNames[randomIndex],
-                Grade.Unique => "유니크 롱소드",
+                Grade.Unique => "유니트 롱소드",
                 _ => "롱소드"
             };
         }

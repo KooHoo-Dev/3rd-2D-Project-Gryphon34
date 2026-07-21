@@ -43,7 +43,7 @@ EnemySpawnEleteGoblin()
 transform.position = Vector3.zero;
 
 // Struct는 대입만 해주면 바로 사본을 이용해서 사용 가능
-Player.LocalPlayer.transform.position = transform.position;;
+Player.LocalPlayer.transform.position = transform.position;
 
 // 기존의 target을 이용해서 두번째 타겟을 만들고 싶다면 아래처럼 사용할 수 없음
 Transform target = Player.LocalPlayer.transform;

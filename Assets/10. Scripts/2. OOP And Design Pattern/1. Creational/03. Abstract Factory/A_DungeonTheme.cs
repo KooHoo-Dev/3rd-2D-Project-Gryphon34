@@ -41,7 +41,7 @@ namespace Study_OOP_And_Design_Pattern.Creational
     public class ForestDungeon : DungeonTheme
     {
         public override Monster CreateMonster() { return new ForestGoblinSpawner().Spawn(Vector3.zero); }
-        public override Projectile CreateProjectile() { return new FireBall(); }
+        public override Projectile CreateProjectile() { return new LeafArrow(); }
         public override Background CreateBackground() { return new Forest(); }
         public override Item[] CreateReward()
         {
@@ -78,20 +78,11 @@ namespace Study_OOP_And_Design_Pattern.Creational
     
     public class LavaDungeon : DungeonTheme
     {
-        public override Monster CreateMonster()
-        {
-            return new LavaGolemSpawner().Spawn(Vector3.zero);
-        }
+        public override Monster CreateMonster() { return new LavaGolemSpawner().Spawn(Vector3.zero); }
 
-        public override Projectile CreateProjectile()
-        {
-            return  new FireBall();
-        }
+        public override Projectile CreateProjectile() { return  new FireBall(); }
 
-        public override Background CreateBackground()
-        {
-            return new Lava();
-        }
+        public override Background CreateBackground() { return new Lava(); }
 
         public override Item[] CreateReward()
         {
@@ -101,7 +92,6 @@ namespace Study_OOP_And_Design_Pattern.Creational
             {
                 items[i] = new OrcLoot().Drop();
             }
-
             return items;
         }
     }
