@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Study.MiniDefence
 {
     // 타일의 종류
@@ -18,19 +20,21 @@ namespace Study.MiniDefence
     // 그리드의 한칸 상태.
     public class Tile
     {
+        public Vector2Int Coord { get; }
         public TileKind Kind;
-        public bool Occupied; //점유한 유닛이 있는지?
+        public Unit Unit;
 
-        public Tile(TileKind kind)
+        public Tile(Vector2Int coord, TileKind kind)
         {
+            Coord = coord;
             Kind = kind;
-            Occupied = false;
+            Unit = null;
         }
         
         public bool IsBuildable()
         {
             //타일의 종류가 Buildable이면서 점유한 유닛이 없어야 Build 가능한 상태
-            return (Kind == TileKind.Buildable) && (Occupied == false);
+            return (Kind == TileKind.Buildable) && (Unit == null);
         }
     }
 }

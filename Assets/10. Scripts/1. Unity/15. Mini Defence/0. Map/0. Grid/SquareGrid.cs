@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Study.MiniDefence
@@ -11,7 +12,8 @@ namespace Study.MiniDefence
     // PS : 본인의 프로젝트 맞게 자료구조를 직접 제작해서 사용하는 경우가
     //     매우 빈번하다. 특히 게임
 
-    public class SquareGrid
+    // 멤버 필드, 메서드 선언 구역
+    public partial class SquareGrid
     {
         public int Width { get; }
         public int Height { get; }
@@ -21,7 +23,9 @@ namespace Study.MiniDefence
         
         private Tile[,] tiles;
         
-        public  SquareGrid(int width, int height, 
+        // 데이터를 주입받아서 생성할 수 있도록 public 생성자가 아닌
+        // private 생성자로 정의한다.
+        private SquareGrid(int width, int height, 
             float cellSize, Vector2 origin)
         {
             Width = width;
@@ -35,7 +39,7 @@ namespace Study.MiniDefence
             {
                 for (int x = 0; x < Width; x++)
                 {
-                    tiles[x, y] = new Tile(TileKind.Buildable);
+                    tiles[x, y] = new Tile( new Vector2Int(x,y), TileKind.Buildable);
                 }
             } 
         }
@@ -84,7 +88,6 @@ namespace Study.MiniDefence
             return GetTileOrNull(point.x, point.y);
         }
         
-        
         // 3. 월드 좌표 기준 -> 타일 좌표로 변환하는 기능
         //  : 월드 좌표 기준 (50.34 , 10.21)가 타일좌표로는 어떻게 되니?
         // 원리
@@ -116,6 +119,78 @@ namespace Study.MiniDefence
             
             return new Vector3(x, y, 0);
         }
-        
+
+        // 아래의 함수는 타일 정보를 직렬화 하는 메소드가 됩니다
+        public List<TileKind> ToKindList()
+        {
+            List<TileKind> kindList = new List<TileKind>();
+            
+            for (int y = 0; y < Height; y++)
+            {
+                for (int x = 0; x < Width; x++)
+                {
+                    kindList.Add(tiles[x, y].Kind);
+                }
+            }
+
+            return kindList;
+        }
+    }
+
+    // static(정적) 필드, 메서드 선언 구역    
+    public partial class SquareGrid
+    {
+        /// <summary>
+        /// TileKind[,] 배열로 SquareGrid를 생성하고, 반환합니다. (MapBuilder에서 SquareGrid를 생성할때 사용)
+        /// </summary>
+        /// <param name="origin"></param>
+        /// <param name="cellSize"></param>
+        /// <param name="kinds"></param>
+        /// <returns></returns>
+        public static SquareGrid FromKinds(Vector2 origin, float cellSize, TileKind[,] kinds)
+        {
+            int width = kinds.GetLength(0); //x의 길이, 너비
+            int height = kinds.GetLength(1); //y의 길이, 높이
+
+            SquareGrid grid = new SquareGrid(width, height, cellSize, origin);
+
+            for (int y = 0; y < grid.Height; y++)
+            {
+                for (int x = 0; x < grid.Width; x++)
+                {
+                    Tile tile = new Tile(new Vector2Int(x,y), kinds[x, y]);
+                    tile.Kind = kinds[x, y];
+                    grid.tiles[x, y] = tile;
+                }
+            }
+
+            return grid;
+        }
+
+        /// <summary>
+        /// List<TileKind>로 SquareGrid를 생성하고, 반환합니다. (MapData에서 SquareGrid를 생성할때 사용)
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="kinds"></param>
+        /// <returns></returns>
+        public static SquareGrid FromKindList
+            (int width, int height, float cellSize, Vector2 origin, List<TileKind> kindList)
+        {
+            SquareGrid grid = new SquareGrid(width, height, cellSize, origin);
+
+            for (int y = 0; y < grid.Height; y++)
+            {
+                for (int x = 0; x < grid.Width; x++)
+                {
+                    Tile tile = new Tile(new Vector2Int(x,y),
+                        kindList[y * grid.Width + x]);
+                    tile.Kind = kindList[y * grid.Width + x];
+                    grid.tiles[x, y] = tile;
+                }
+            }
+
+            return grid;
+        }
     }
 }

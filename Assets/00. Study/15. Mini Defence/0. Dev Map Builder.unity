@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &277428989
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4859452810004858069, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_Name
+      value: GeneratedMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498755980988871360, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
 --- !u!1 &325173383
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +372,7 @@ MonoBehaviour:
   goalTile: {x: 9, y: 4}
   enablePainting: 1
   paintKind: 1
-  paintCamera: {fileID: 0}
+  paintCamera: {fileID: 325173385}
   prefabPath: Assets/10. Scripts/1. Unity/15. Mini Defence/GeneratedMap.prefab
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -323,3 +380,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 325173386}
   - {fileID: 1384696909}
+  - {fileID: 277428989}
