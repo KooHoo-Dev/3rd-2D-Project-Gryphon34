@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Study.MiniDefence
@@ -55,78 +53,5 @@ namespace Study.MiniDefence
             
             return returnList;
         }
-
-#if UNITY_EDITOR
-        // 씬에 특정 정보를 렌더링 하는 디버깅용 이벤트 함수입니다.
-        // 개발하면서 중요한 정보들을 시각화하는데 사용됩니다.
-        // 이번에는 RoutePoints를 Scene화면에 렌더링 하는 용도로 사용합니다
-        private void OnDrawGizmos()
-        {
-            List<Vector3> worldRoutePoints = GetWorldRoutePoints();
-            
-            // Gizmos는 Unity Scene에서 특정 객체를 그리는데 사용하는 클래스입니다
-            // Color등을 설정하고 Line(선), Sphere(구체), Cube(박스) 등을 렌더링하는
-            // 함수들을 갖고 있습니다.
-            
-            Gizmos.color = Color.cyan;
-
-            for (int i = 0; i < worldRoutePoints.Count; i++)
-            {
-                // .DrawSphere(위치좌표, 반지름)
-                Gizmos.DrawSphere(worldRoutePoints[i], 0.08f);
-                //다음 단계 녀석이 있으면
-                if(i+1 < worldRoutePoints.Count)
-                    // 선을 그려준다
-                    Gizmos.DrawLine(worldRoutePoints[i], worldRoutePoints[i+1]);
-            }
-            
-            // 스폰타일과 목표타일은 따로 처리해준다
-            Gizmos.color = Color.green; // 스폰 타일 색깔
-            // Wire계열의 함수들은 내부가 비어있습니다.
-            Gizmos.DrawWireSphere(worldRoutePoints[0], 0.2f);
-            
-            Gizmos.color = Color.red; // 목표 타일 색깔
-            // Wire계열의 함수들은 내부가 비어있습니다.
-            // ^1 : 배열의 마지막 요소
-            // ^2 : 배열의 마지막 전 요소
-            Gizmos.DrawWireSphere(worldRoutePoints[^1], 0.2f);
-        }
-
-        [Header("타일 종류별 스프라이트 (종류 하나에 그림 하나)")]
-        public Sprite BuilableSprite;
-        public Sprite PathSprite;
-        public Sprite SpawnSprite;
-        public Sprite GoalSprite;
-        public Sprite BlockedSprite;
-
-        public Sprite SpriteOf(TileKind kind)
-        {
-            return kind switch
-            {
-                TileKind.Buildable => BuilableSprite,
-                TileKind.Path => PathSprite,
-                TileKind.Spawn => SpawnSprite,
-                TileKind.Goal => GoalSprite,
-                _ => BlockedSprite,
-            };
-        }
-        
-        // MapData를 토대로 새로운 스프라이트를 덮어 씌우는 기능
-        [ContextMenu("Apply Tile Sprites")]
-        public void ApplyTileSprites()
-        {
-            for (int i = 0; i < TileKinds.Count; i++)
-            {
-                // Transform.GetChild(int index)
-                // : index 번쨰 자식 Transform을 반환합니다.
-                SpriteRenderer sr = transform.GetChild(i).GetComponent<SpriteRenderer>();
-                
-                sr.sprite = SpriteOf(TileKinds[i]);
-                sr.color = Color.white;
-            }
-        }
-#endif
-        
-
     }
 }
