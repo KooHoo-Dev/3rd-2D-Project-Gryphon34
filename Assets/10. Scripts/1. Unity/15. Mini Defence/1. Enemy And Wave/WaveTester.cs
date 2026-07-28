@@ -2,6 +2,7 @@
 using Study.Utilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace Study.MiniDefence
 {
@@ -17,14 +18,28 @@ namespace Study.MiniDefence
         [SerializeField] private WaveDef waveDef;
         [SerializeField] private EnemyDef enemyDef;
 
+        private EnemyTable enemyTable = new EnemyTable();
+        private WaveTable waveTable = new WaveTable();
+        
+        private void Awake()
+        {
+            enemyTable.Load();
+            waveTable.Load(enemyTable);
+        }
+
+        private void StartWave(int waveID)
+        {
+            WaveDef def = waveTable.Get(waveID);
+            waveManager.StartWave(def, map);
+        }
+
         private void Update()
         {
             // 개발용 테스트를 위한 코드
             if (SimpleInput.GetKeyDown(Key.Digit1))
             {
-                // 테스트를 위해 Enemy 정보를 주입한다.
-                waveDef.Enemy = enemyDef;
-                waveManager.StartWave(waveDef, map);
+                int randNum = Random.Range(1, waveTable.Count+1);
+                StartWave(randNum);
             }
         }
 

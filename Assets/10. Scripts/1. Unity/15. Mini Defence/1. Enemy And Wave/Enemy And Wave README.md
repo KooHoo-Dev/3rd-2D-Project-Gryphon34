@@ -2,9 +2,9 @@
 
 # WaveManager
 - 싱글톤 클래스. WaveManger.Instance로 전역 접근 가능
-    - `WaveManger.Instance.StartWave(waveDef, map);`
+  - `WaveManger.Instance.StartWave(waveDef, map);`
 - 정상작동을 위해 `WaveDef`, `MapData`, `EnemyDef`가 필요함
-    - 사용예시 : `WaveTester` 구성을 참조. `1.Dev Wave And Enemy 씬`을 참고할것
+  - 사용예시 : `WaveTester` 구성을 참조. `1.Dev Wave And Enemy 씬`을 참고할것
 - `public void StartWave(WaveDef wave, MapData map);` 함수를
   이용해서 웨이브 시작 가능
 - MapData에 정의된 RoutePoint를 기반으로 WorldPoistion 상에서
