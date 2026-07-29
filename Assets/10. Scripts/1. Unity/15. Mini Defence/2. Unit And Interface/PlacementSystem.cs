@@ -1,65 +1,62 @@
-﻿using Study.Utilities;
+﻿using Jay;
 using UnityEngine;
 
 namespace Study.MiniDefence
 {
-    public class PlacementSystem : MonoBehaviour
+    // 설계는 객체의 역할을 나누는게 핵심입니다.
+    // BoardMap         : 상태. 타일이 지금 어떤 상태인가? => 상태 보관
+    // PlacementSystem  : 규칙(게임 로직). 그래서 스폰해도 되는가? => 규칙 판단
+    
+    // 유닛을 "놓고 / 팔고" 하는 규칙의 처리를 담당하는 녀석
+    // 유저의 자원을 소모하거나 증가 시키는것(쓰고, 돌려주는) 일은
+    // EconomyManager가 담당한다. 잔액을 변경한다거나 하지 않고
+    // PlacementSystem은 그저 요청만 할 뿐.
+    
+    public class PlacementSystem : SingletonBase<PlacementSystem>
     {
-        public MapData mapData;
-        private SquareGrid grid;
+        [SerializeField] private Transform unitRoot = null;
 
-        private void Start()
-        {
-            grid = mapData.ToGrid();
-        }
-        
-        private void Update()
-        {
-            if (SimpleInput.GetMouseButtonDown(0))
-            {
-                Tile spawnTile = BuildableTile();
-                if(spawnTile != null) SpawnOne(spawnTile);
-            }
-        }
+        #region Public Method
 
-        private Tile BuildableTile()
+        // 지정한 타일에 유닛을 세운다. 실패하면 null을 반환
+        public Unit Build(UnitDef def, Vector2Int coord)
         {
-            Vector2 mousePosition = SimpleInput.GetMousePosition();
-            Vector3 worldMousePoint = Camera.main.ScreenToWorldPoint(mousePosition);
-            worldMousePoint.z = transform.position.z;
-            Debug.Log(worldMousePoint);
-            Vector2Int tilePos = grid.WorldToCell(worldMousePoint);
-            Debug.Log(tilePos);
-            Tile tile = grid.GetTileOrNull(tilePos);
+            // 규칙 흐름
+            // 1 : 타일 규칙을 확인합니다
+            // 2 : 비용을 확인합니다 (게임에 경제시스템 들어가면 구현)
+            // 3 : 타일 중심에 유닛을 생성하고 초기화
+            // 4 : 유닛이 점유했다고 보드 & 타일에 기록 합니다
             
-            if (tile ==null || tile.Kind == TileKind.Blocked)
-            {
+            // 나중에 개발할때는 아래처럼 싱글톤 호출하지말고
+            // 캐싱해서 쓰세요
+            if (BoardMap.instance.IsBuildable(coord) == false) 
                 return null;
-            }
-            return tile;
+            // 돈처리하는거 넣고, 돈없으면 return 때리기
+            Unit unit = Instantiate(def.Prefab, unitRoot);
+            unit.transform.position = BoardMap.instance.CellToWorld(coord);
+            BoardMap.instance.SetUnit(coord, unit);
+            return unit;
         }
 
-        private void SpawnOne(Tile tile)
+        // 지정한 타일에 유닛을 제거한다
+        public bool Remove(Vector2Int coord)
         {
-            Vector2 spawnPosition = tile.Coord;
-            int randNum = Random.Range(0, 3);
-            switch (randNum)
-            {
-                case 0: Unit unit0 = Resources.Load<Unit>("Assets/Resources/Mini Defence/Prefabs/Circle.prefab");
-                    Instantiate(unit0, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
-                    tile.Kind = TileKind.Blocked;
-                    break;
-                case 1: Unit unit1 = Resources.Load<Unit>("Assets/Resources/Mini Defence/Prefabs/Square.prefab");
-                    Instantiate(unit1, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
-                    tile.Kind = TileKind.Blocked;
-                    break;
-                case 2: Unit unit2 = Resources.Load<Unit>("Assets/Resources/Mini Defence/Prefabs/Triangle.prefab");
-                    Instantiate(unit2, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
-                    tile.Kind = TileKind.Blocked;
-                    break;
-            }
+            // 규칙 흐름
+            // 1) 타일 확인합니다
+            // 2) 타일 점유 해제 처리 합니다.
+            // 3) 금액을 환불 받습니다 (게임에 경제시스템 들어가면 구현)
+
+            Unit unit = BoardMap.instance.GetUnitOrNull(coord);
+            if (unit == null) return false;
             
+            BoardMap.instance.SetUnit(coord, null);
+            // 자원 환불 처리
+            Destroy(unit.gameObject);
+            return true;
         }
+
+        #endregion
+
         
     }
 }
