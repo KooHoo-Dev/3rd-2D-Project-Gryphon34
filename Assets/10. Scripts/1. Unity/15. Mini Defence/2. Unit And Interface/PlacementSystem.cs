@@ -1,4 +1,5 @@
-﻿using Jay;
+﻿using System;
+using Jay;
 using UnityEngine;
 
 namespace Study.MiniDefence
@@ -31,10 +32,20 @@ namespace Study.MiniDefence
             // 캐싱해서 쓰세요
             if (BoardMap.instance.IsBuildable(coord) == false) 
                 return null;
+            
             // 돈처리하는거 넣고, 돈없으면 return 때리기
+            int cost = def.Cost;
+            if (EconomyManager.instance.TrySpend(cost) == false)
+            {
+                Debug.Log($"[PlacementSystem] 광물이 부족합니다." +
+                          $"필요 : {cost}, 보유 : {EconomyManager.Instance.Minerals}");
+                return null;
+            }
+            
             Unit unit = Instantiate(def.Prefab, unitRoot);
             unit.transform.position = BoardMap.instance.CellToWorld(coord);
             BoardMap.instance.SetUnit(coord, unit);
+            unit.Init(def, coord);
             return unit;
         }
 
@@ -57,6 +68,61 @@ namespace Study.MiniDefence
 
         #endregion
 
+        #region 미리 보기 기능
+
+        // 임시 Unit 개체를 생성해서 미리보기 기능을 만들어 봅시다.
         
+        [Header("미리보기 설정")]
+        [SerializeField] [Range(0, 1)] private float previewAlpha = 0.7f;
+
+        private Unit previewUnit;
+
+        public event Action<Unit> UnitPlaced;
+        public event Action<Unit> UnitRemoved;
+        
+        // 이 자리에 def 유닛을 세우면 어떤 모습인지 확인하기위해
+        // 반투명 개체를 먼저 놓아본다. 유닛의 스폰 확정은 Build가 한다
+        public void ShowPreview(UnitDef def, Vector2Int targetCoord)
+        {
+            ClearPreview();
+
+            // 같은 개체를 하나 생성해서 unitRoot의 자식으로 넣어주고
+            // previewUnit 변수에 할당해준다.
+            previewUnit = Instantiate(def.Prefab, unitRoot);
+            // 프리뷰 유닛의 위치에
+            // BoardMap 셀 인덱스 targetCoord 좌표에 월드 포지션으로 대입해준다. 
+            previewUnit.transform.position = BoardMap.instance.CellToWorld(targetCoord);
+            previewUnit.gameObject.name = $"Preview_{def.Name}";
+
+            // 프리뷰 개체의 동작을 정지시켜놓는다
+            previewUnit.enabled = false;
+            previewUnit.GetComponent<Animator>().enabled = false;
+
+            // 프리뷰 개체를 반투명하게 만들어 준다
+            SpriteRenderer[] spriteRenderers = 
+                previewUnit.GetComponentsInChildren<SpriteRenderer>();
+
+            for (int i = 0; i < spriteRenderers.Length; i++)
+            {
+                SpriteRenderer sr = spriteRenderers[i];
+                Color color = sr.color; // sr의 컬러를 값 복사 해온다
+                color.a = previewAlpha; // color의 알파값을 previewAlpha로 설정한다
+                sr.color = color;       // color를 sr컬러에 값 복사 한다
+            }
+        }
+
+        public void ClearPreview()
+        {
+            if(previewUnit == null) return;
+            Destroy(previewUnit.gameObject);
+            previewUnit = null;
+        }
+
+        #endregion
+        
+        // 판매시 돌려줄 금액.
+        public int GetRefund(Unit unit)
+            => Mathf.RoundToInt(unit.Def.Cost * GameSettings.Instance.RefundRate);
+
     }
 }

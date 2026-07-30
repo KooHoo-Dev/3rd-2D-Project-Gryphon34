@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8ee311863345b0b070769a13e2e2dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb79a4f87b94652bbdc3825db19a1cd, type: 3}
   m_Name: MyGameSetting
-  m_EditorClassIdentifier: Assembly-CSharp::Study_OOP_And_Design_Pattern.GameSettings
-  BGMVolume: 7.14
-  SFXVolume: 3.61
-  GraphicQuality: 88
+  m_EditorClassIdentifier: Assembly-CSharp::Study_OOP_And_Design_Pattern.Creational.GameSettings
+  BGMVolume: 5.84
+  SFXVolume: 6.03
+  GraphicQuality: 306

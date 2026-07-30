@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7192046250685298909}
   - component: {fileID: 5244127760193672509}
-  - component: {fileID: 7194264697579252572}
+  - component: {fileID: 6411456508191444323}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7194264697579252572
+--- !u!114 &6411456508191444323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,6 +101,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 503929566691796008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31502c1a9a14337891331928c614750, type: 3}
+  m_Script: {fileID: 11500000, guid: ec94eaa3f36f4225a840c42e00e67114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.Unit

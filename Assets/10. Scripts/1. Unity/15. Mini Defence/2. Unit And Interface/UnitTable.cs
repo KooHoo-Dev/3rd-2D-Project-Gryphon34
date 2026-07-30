@@ -16,7 +16,7 @@ namespace Study.MiniDefence
         
         // 현재 테이블에 등록된 모든 Values(Unit들)을 읽기전용 콜렉션 형태로 리턴한다
         // 외부에서 foreach같은걸로 조회할수 있다
-        public IReadOnlyCollection<UnitDef> Units => unitDefs.Values;
+        public IReadOnlyCollection<UnitDef> All => unitDefs.Values;
         public UnitDef Get(int id) => unitDefs[id];
         
         public void Load()

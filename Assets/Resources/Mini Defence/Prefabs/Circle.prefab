@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8348617803858503653}
   - component: {fileID: 6915752993862767108}
-  - component: {fileID: 1049309203225648956}
+  - component: {fileID: 4789948740188721375}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1049309203225648956
+--- !u!114 &4789948740188721375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,6 +101,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2473370833690601185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31502c1a9a14337891331928c614750, type: 3}
+  m_Script: {fileID: 11500000, guid: ec94eaa3f36f4225a840c42e00e67114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.Unit

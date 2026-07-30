@@ -3051,7 +3051,7 @@ GameObject:
   - component: {fileID: 2618933236716836761}
   - component: {fileID: 4091206673692709343}
   - component: {fileID: 5627505381881735249}
-  - component: {fileID: 6677826258473814620}
+  - component: {fileID: -5714006819707295226}
   m_Layer: 0
   m_Name: Unit_01
   m_TagString: Untagged
@@ -3069,7 +3069,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0872, y: 2.0872, z: 2.0872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6841398039968876202}
@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011903923427490205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d5070ee950e5458e93aa21532c14bf1, type: 3}
   m_Name: 
@@ -4183,7 +4183,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011903923427490205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6ce3ab309b73423d9bd349f86d010d7, type: 3}
   m_Name: 
@@ -4195,7 +4195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011903923427490205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e05821af67814945975a9b6c8f504b4, type: 3}
   m_Name: 
@@ -4283,7 +4283,7 @@ MonoBehaviour:
     visible: 0
   - type: 17
     visible: 1
---- !u!114 &6677826258473814620
+--- !u!114 &-5714006819707295226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4292,7 +4292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8011903923427490205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31502c1a9a14337891331928c614750, type: 3}
+  m_Script: {fileID: 11500000, guid: ec94eaa3f36f4225a840c42e00e67114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.Unit
 --- !u!1 &8540808838118770042

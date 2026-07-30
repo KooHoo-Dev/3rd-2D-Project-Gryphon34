@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Resources/Mini Defence/Prefabs/Square.prefab.meta
 guid: 43eee34f5f6e19d45a9ad46ede98aa9e
+========
+guid: eec92607daba91146a6562ddff873cfc
+>>>>>>>> WorkerB-WaveAndEnemy:Assets/Resources/Triangle.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

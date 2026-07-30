@@ -2798,7 +2798,7 @@ GameObject:
   - component: {fileID: 6728512950967164068}
   - component: {fileID: 6889455928908348344}
   - component: {fileID: 334310230595350318}
-  - component: {fileID: 1459054271556530412}
+  - component: {fileID: 2175090364268264032}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Untagged
@@ -2816,8 +2816,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0872, y: 2.0872, z: 2.0872}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 457458467724096695}
   - {fileID: 6843048178924737100}
@@ -2836,7 +2836,7 @@ Animator:
   m_GameObject: {fileID: 7035264721408419236}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0ea48755e2f6235418e0deafe1e045ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6a11e20fe9224bf4791b7fc286408bbe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4030,7 +4030,7 @@ MonoBehaviour:
     visible: 0
   - type: 17
     visible: 1
---- !u!114 &1459054271556530412
+--- !u!114 &2175090364268264032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4039,7 +4039,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7035264721408419236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468faabd91744bcd839e462b11b7768a, type: 3}
+  m_Script: {fileID: 11500000, guid: 673f987ce2644694a2c7f5288ee05012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.Enemy
 --- !u!1 &7202391952046242859
