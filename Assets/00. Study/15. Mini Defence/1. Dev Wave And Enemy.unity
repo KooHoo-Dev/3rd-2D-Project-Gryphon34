@@ -256,7 +256,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &439352054
+--- !u!1 &577686572
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,34 +264,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 439352056}
-  - component: {fileID: 439352055}
+  - component: {fileID: 577686574}
+  - component: {fileID: 577686573}
   m_Layer: 0
-  m_Name: UnitTester
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &439352055
+--- !u!114 &577686573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439352054}
+  m_GameObject: {fileID: 577686572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc1e1dcf79d4751978d6dced6155f69, type: 3}
+  m_Script: {fileID: 11500000, guid: ec19581cbcf64615af45cd9f8affec90, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.UnitTester
---- !u!4 &439352056
+  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.MapBuilder
+  width: 10
+  height: 8
+  cellSize: 1
+  squareSprite: {fileID: 21300000, guid: fab06e0be9375cc4d823efa71629885c, type: 3}
+  padding: 0
+  buildableColor: {r: 0.24, g: 0.27, b: 0.32, a: 1}
+  pathColor: {r: 0.95, g: 0.55, b: 0.15, a: 1}
+  spawnColor: {r: 0.2, g: 0.7, b: 0.3, a: 1}
+  goalColor: {r: 0.9, g: 0.3, b: 0.3, a: 1}
+  waypointColor: {r: 0.95, g: 0.85, b: 0.2, a: 1}
+  blockedColor: {r: 0.12, g: 0.12, b: 0.14, a: 1}
+  spawnTile: {x: 0, y: 4}
+  goalTile: {x: 9, y: 4}
+  enablePainting: 1
+  paintKind: 1
+  paintCamera: {fileID: 325173385}
+  prefabPath: Assets/10. Scripts/1. Unity/15. Mini Defence/GeneratedMap.prefab
+--- !u!4 &577686574
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439352054}
+  m_GameObject: {fileID: 577686572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.21011, y: 5.62978, z: 0}
@@ -300,18 +317,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &487934404 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4760129821199302626, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
-  m_PrefabInstance: {fileID: 602119984}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ec19919d3240b6b2e53a4f2cd10f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.MapData
---- !u!1001 &602119984
+--- !u!1001 &828055148
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -368,51 +374,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b1212545d8781478ab8f88d6b015b3, type: 3}
---- !u!1 &1194195380
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194195381}
-  - component: {fileID: 1194195382}
-  m_Layer: 0
-  m_Name: BoardMap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1194195381
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194195380}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.21011, y: 5.62978, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1194195382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194195380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6fb28e7dc80429e863edf8634de093e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.BoardMap
-  mapData: {fileID: 487934404}
 --- !u!1 &1649330435
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,59 +484,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2082924794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2082924795}
-  - component: {fileID: 2082924796}
-  m_Layer: 0
-  m_Name: PlacementSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2082924795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082924794}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.21011, y: 5.62978, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2082924796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082924794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2090a3e7e46648daac1bc8bcb5ac85e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.PlacementSystem
-  unitRoot: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 325173386}
   - {fileID: 1649330438}
-  - {fileID: 602119984}
   - {fileID: 2013852799}
-  - {fileID: 1194195381}
-  - {fileID: 2082924795}
-  - {fileID: 439352056}
+  - {fileID: 577686574}
+  - {fileID: 828055148}

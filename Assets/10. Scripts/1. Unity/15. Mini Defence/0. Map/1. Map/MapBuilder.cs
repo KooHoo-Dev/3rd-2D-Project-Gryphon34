@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Study.Utilities;
 using UnityEngine.InputSystem;
 
 #if UNITY_EDITOR
@@ -49,10 +50,90 @@ namespace Study.MiniDefence
 
         // 칸 상태는 칸마다 컴포넌트를 붙이는게 아니라 배열로 따로 관리한다.
         private TileKind[,] kinds;
-        private SpriteRenderer[,] renderers;
+        
         private MapData mapData;
 
         private SquareGrid grid;
+        private SpriteRenderer[,] renderers;
+
+        private void Start() => GenerateMap();
+
+        #region Painting
+
+        private void Update()
+        {
+            // 그리드가 생성되지 않았다면 페인팅 기능을 이용하지 못하게 한다.
+            if (grid == null) return;
+
+            bool left = SimpleInput.GetMouseButton(SimpleInput.MouseButton.Left);
+            bool right = SimpleInput.GetMouseButton(SimpleInput.MouseButton.Right);
+
+            if (left == false && right == false) return;
+
+            // 스크린 좌표 가지고 와서
+            Vector2 screen = SimpleInput.GetMousePosition();
+            // 씬의 월드 좌표로 변환
+            Vector3 world = paintCamera.ScreenToWorldPoint(new Vector3(screen.x, screen.y, 0));
+            // Grid좌표로 변환
+            Vector2Int coord = grid.WorldToCell(world);
+            
+            // 올바른 coord좌표를 얻었다면
+            if (grid.InBounds(coord))
+            {
+                // 색을 칠한다(정보 변경)
+                Paint(coord, left ? paintKind : TileKind.Buildable);
+                // 색을 칠하고 맵 데이터에 반영해준다.
+                // (최적화를 위해 원래는 왼쪽 클릭 해제 Or 오른쪽 클릭 해제시 동작하게 해줘야함.) 
+                SyncMapData();  
+            }
+        }
+
+        private void Paint(Vector2Int coord, TileKind kind)
+        {
+            // 이 함수는 시작할때부터 무조건 유효한 값을 가지고 시작합니다.
+            // 따라서 grid.InBounds를 검사할 필요가 없다.
+            // 하지만 넣고싶으면 넣으셔도 무방(아래처럼)
+            // if (grid.InBounds(coord) == false) return;
+            
+            Tile tile = grid.GetTileOrNull(coord);
+            // 해당 타일의 kind가 매개변수 kind와 동일하다면 return;
+            if (tile.Kind == kind) return;
+            
+            // 스폰/목표 타일은 맵에 하나만 존재하기 때문에
+            // 색칠 변경이 일어날 경우 이전에 있었던 타일을 BuildAble로 바꿔준다
+            if (kind == TileKind.Spawn)
+            {
+                // 현재 spawnTile의 종류가 TileKind.Spawn인지 검사하고 
+                if (IsKindAt(spawnTile, TileKind.Spawn))
+                {
+                    // 맞다면 바꿔준다
+                    ApplyKind(grid.GetTileOrNull(spawnTile), TileKind.Buildable);
+                }
+                spawnTile = coord;
+            }
+            else if (kind == TileKind.Goal)
+            {
+                // 현재 spawnTile의 종류가 TileKind.Spawn인지 검사하고 
+                if (IsKindAt(goalTile, TileKind.Goal))
+                {
+                    // 맞다면 바꿔준다
+                    ApplyKind(grid.GetTileOrNull(goalTile), TileKind.Buildable);
+                }
+                
+                goalTile = coord;
+            }
+            
+            ApplyKind(tile, kind);
+        }
+
+        // 한 tile의 종류와 색을 결정한다.
+        private void ApplyKind(Tile tile, TileKind kind)
+        {
+            tile.Kind = kind;
+            renderers[tile.Coord.x, tile.Coord.y].color = ColorOf(tile.Kind);
+        }
+
+        #endregion
         
         # region Private Method
         
@@ -85,15 +166,87 @@ namespace Study.MiniDefence
             return TileKind.Buildable;
         }
         
+        private bool IsKindAt(Vector2Int coord, TileKind kind)
+        {
+            if (grid.InBounds(coord) == false) return false;
+            return grid.GetTileOrNull(coord).Kind == kind;
+        }
+        
         # endregion
         
         # region MapData Method
+        // WayPoint를 생성하는게 중요합니다
 
+        // 현재 그리드에서 "정보만" 뽑아서 루트의 MapData에 기록한다.
         private void SyncMapData()
         {
+            mapData.ImportFrom(grid, BuildRouteLocal());
+        }
+
+        private List<Vector3> BuildRouteLocal()
+        {
+            Vector2Int spawn = spawnTile;
+            Vector2Int goal = goalTile;
+            HashSet<Vector3> visitedPathTiles = new HashSet<Vector3>();
             
+            List<Vector3> routePoints = new List<Vector3>();
+            routePoints.Add(grid.CellToWorld(spawn));
+
+            // --- 아래부터 본로직 ---
             
-            mapData.ImportFrom(grid, null);
+            // 검색 우선순위 순서대로 놓는다. 반대방향의 경우는 (i+2) % 4 로 구현
+            Vector2Int[] dirs = new[] 
+                { Vector2Int.right, Vector2Int.up, Vector2Int.left, Vector2Int.down };
+            
+            // usedRoad[x, y, dir] : 3차원 배열이고, 의미는 (x,y) 칸에서 dir 방향으로
+            //                      길을 지나갔는가? 저장 용도
+            bool[,,] usedRoad = new bool[grid.Width, grid.Height, dirs.Length];
+            Vector2Int current = spawn; // 탐색 시작 인덱스를 지정해준다
+
+            // 매번마다 Painting을 해서 방어코드가 하나 있어야 합니다(while 탈출 조건)
+            // PS : 무한 루프 방지
+            
+            int guard = width * height * dirs.Length;
+            while (true)
+            {
+                guard--;
+                if (guard < 0) break;
+                
+                // --- 타일 검사 로직 --- 
+                int chosen = -1; // 조건 검사에 의해 선택된 숫자
+                for (int i = 0; i < dirs.Length; i++) // 4방향을 순서대로 검색을 해봅니다.
+                {
+                    // 이번에 조사해볼 타일의 인덱스를 고른다
+                    Vector2Int node = current + dirs[i];  
+                    // 맵의 범위 밖이면 Pass
+                    if(grid.InBounds(node) == false) continue;
+                    // Path 타입이 아니면 Pass
+                    if(grid.GetTileOrNull(node).Kind != TileKind.Path) continue;
+                    // 동일한 위치좌표에서 해당 방향으로 지나갔다면
+                    if(usedRoad[current.x, current.y, i]) continue;
+                    
+                    chosen = i;
+                    break;
+                }
+
+                if (chosen < 0) break; // 더 갈 길이 없으니 while문을 탈출
+                
+                // --- 경로 처리 로직 ---
+                
+                // 검사에 의해 선택된 방향을 좌표로 바꿔준다
+                Vector2Int next = current + dirs[chosen]; //
+                
+                // 양쪽 모두 "지나간 길"로 표시한다
+                usedRoad[current.x, current.y, chosen] = true;
+                usedRoad[next.x, next.y, (chosen + 2) % dirs.Length] = true;
+
+                // WayPoint를 남긴다
+                routePoints.Add(grid.CellToWorld(next));
+                current = next;
+            }
+
+            routePoints.Add(grid.CellToWorld(goal));
+            return routePoints;
         }
         
         # endregion
