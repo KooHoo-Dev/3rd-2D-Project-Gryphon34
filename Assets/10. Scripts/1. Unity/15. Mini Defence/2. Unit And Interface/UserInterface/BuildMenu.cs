@@ -6,7 +6,6 @@ using UnityEngine.UI;
 namespace Study.MiniDefence
 {
     // 빈 건설 패드를 클릭했을 때 뜨는 "유닛 생성 메뉴".
-    //
     // 칸을 인스펙터에 손으로 3개 만들어 두지 않고 데이터에서 만든다.
     public class BuildMenu : MonoBehaviour
     {

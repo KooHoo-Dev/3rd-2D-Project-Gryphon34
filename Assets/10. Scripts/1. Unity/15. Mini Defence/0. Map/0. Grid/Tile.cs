@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 namespace Study.MiniDefence
@@ -39,4 +38,3 @@ namespace Study.MiniDefence
         }
     }
 }
-

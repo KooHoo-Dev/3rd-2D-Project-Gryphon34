@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 6871526570022997031}
   - component: {fileID: 6237547854070641349}
   - component: {fileID: -6496432141660704258}
+  - component: {fileID: 8772410560457176624}
   m_Layer: 0
   m_Name: Unit_00
   m_TagString: Untagged
@@ -211,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490560117173990002}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -233,7 +234,7 @@ Animator:
   m_GameObject: {fileID: 490560117173990002}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a11e20fe9224bf4791b7fc286408bbe, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ea48755e2f6235418e0deafe1e045ee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1439,6 +1440,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec94eaa3f36f4225a840c42e00e67114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.Unit
+--- !u!114 &8772410560457176624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490560117173990002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f39eb345fbcc343b4d604791cfd33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.ProjectileLauncher
+  projectilePrefab: {fileID: 5767665916357180530, guid: 6dad1f6e390f58f4981505ab72bafbbb, type: 3}
+  firePoint: {fileID: 4554511287530749384}
 --- !u!1 &529129490976578601
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
-﻿using System.IO;
-using System.Net.Mime;
+﻿using System;
+using System.IO;
 using UnityEngine;
 
 namespace Study.MiniDefence
@@ -10,7 +10,7 @@ namespace Study.MiniDefence
     // 2. static이나 싱글톤(C#)으로 만들어 두면 인스펙터에서 배치를 깜빡한다거나
     //   그럴 일이 없다.
     
-    [System.Serializable]
+    [Serializable]
     public class GameSettings
     {
         public int StartingMinerals = 1000;     // 시작 광물량
@@ -35,6 +35,8 @@ namespace Study.MiniDefence
             return JsonUtility.FromJson<GameSettings>(File.ReadAllText(JsonPath));
         }
         
-        public static string JsonPath=>Path.Combine(Application.streamingAssetsPath, "Table","MiniDefence", "config.json");
+        public static string JsonPath
+            => Path.Combine(Application.streamingAssetsPath, 
+                "Table", "MiniDefence", "config.json");
     }
 }

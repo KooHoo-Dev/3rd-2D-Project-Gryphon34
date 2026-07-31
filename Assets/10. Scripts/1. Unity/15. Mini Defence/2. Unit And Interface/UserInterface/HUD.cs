@@ -27,5 +27,23 @@ namespace Study.MiniDefence
             // ".text = " => 가비지가 나옴 
             mineralText.SetText($"광물 : {amount}");
         }
+        
+        
+        #region 버튼 연동 함수들
+
+        private bool CanCallNextWave()
+        {
+            return true;
+        }
+
+        public void OnClickNextWave()
+        {
+            // 테스트 용도로 맹글었음. 바꿔줘야함
+            var wave = DataManager.Instance.GetWaveDef(1);
+            var map = BoardMap.Instance.Map;
+            WaveManager.Instance.StartWave(wave, map);
+        }
+
+        #endregion
     }
 }
