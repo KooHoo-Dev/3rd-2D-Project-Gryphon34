@@ -34,6 +34,7 @@ namespace Study.MiniDefence
         public bool IsBuildable()
         {
             //타일의 종류가 Buildable이면서 점유한 유닛이 없어야 Build 가능한 상태
+            // 트랩이면서 Path면 빌드 가능
             return (Kind == TileKind.Buildable) && (Unit == null);
         }
     }

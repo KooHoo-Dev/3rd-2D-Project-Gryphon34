@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using DG.Tweening;
 using Study.MiniDefence._3._Combat;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Study.MiniDefence
 {
