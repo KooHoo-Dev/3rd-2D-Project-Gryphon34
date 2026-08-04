@@ -78,14 +78,20 @@ namespace Study.MiniDefence._3._Combat
         public static IReadOnlyList<Unit> All => all;
         public static int Count => all.Count;
 
+        // 프리뷰 개체일때랑, 유닛 자체가 초기화가 안되어 있을때 에러남
+        // (Def가 Null일 경우 에러가 납니다) 
+        public static event Action Updated;
+
         public static void Register(Unit unit)
         {
             all.Add(unit);
+            Updated?.Invoke();
         }
 
         public static void Unregister(Unit unit)
         {
             all.Remove(unit);
+            Updated?.Invoke();
         }
 
         // 판을 다시 시작할 때 명부를 비운다. (static 이라 씬을 넘어 남는다)

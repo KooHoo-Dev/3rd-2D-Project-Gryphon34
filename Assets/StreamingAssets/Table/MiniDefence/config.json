@@ -1,6 +1,7 @@
 ﻿{
-  "StartingMinerals": 300,
-  "RefundRate": 1.0,
+  "StartingMinerals": 650,
+  "RefundRate":1.0,
   "StartingLives": 20,
-  "CriMultiplier": 2.0
+  "CriMultiplier": 2.0,
+  "PrepDuration": 30.0
 }

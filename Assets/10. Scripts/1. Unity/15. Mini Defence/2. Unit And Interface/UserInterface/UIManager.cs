@@ -17,7 +17,15 @@ namespace Study.MiniDefence
         [SerializeField] private BuildMenu buildMenu;
         [SerializeField] private ManageMenu manageMenu;
         [SerializeField] private RangeIndicator rangeIndicator;
+        [SerializeField] private GameObject victoryUIRoot;
+        [SerializeField] private GameObject defeatUIRoot;
 
+        public void SetResult(bool isVictory)
+        {
+            GameObject resultRoot = isVictory ? victoryUIRoot : defeatUIRoot;
+            resultRoot.SetActive(true);
+        }
+        
         // 타일 하나를 클릭했다. 그 타일의 상태를 보고 무엇을 열지 정한다.
         public void HandleTileClicked(Tile tile)
         {

@@ -17,6 +17,8 @@ namespace Study.MiniDefence
         public float RefundRate = 0.5f;         // 유닛 판매시 환불 금액
         public int StartingLives = 20;          // 시작시 목숨
         public float CriMultiplier = 2f;        // 크리티컬 피해 배율
+
+        public float PrepDuration = 30f;        // 웨이브 사이 준비 시간
         
         private static GameSettings instance;
 

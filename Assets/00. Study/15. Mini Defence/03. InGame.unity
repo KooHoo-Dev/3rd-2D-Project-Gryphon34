@@ -389,17 +389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.BoardMap
   mapData: {fileID: 1761510688}
---- !u!114 &575781826 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8917226401048114946, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-  m_PrefabInstance: {fileID: 1952111805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &621400828
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,24 +621,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1528201527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6949408301759135195, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-  m_PrefabInstance: {fileID: 1952111805}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1528201529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528201527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d760e55813d4b0d951eb4825bc355d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.HUD
-  mineralText: {fileID: 575781826}
 --- !u!1 &1543272604
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,34 +870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniDefence UI
       objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 3079991297216505624, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
+      propertyPath: worldCamera
       value: 
-      objectReference: {fileID: 1528201529}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickNextWave
-      objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Study.MiniDefence.HUD, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7835143551513194207, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 325173385}
     - target: {fileID: 8431288006634769284, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1007,76 +954,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3043194422989408141, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
+    - target: {fileID: 8908783195984225026, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
+      propertyPath: rangeIndicator
+      value: 
+      objectReference: {fileID: 1376104980}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1162597390366195248, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1952111807}
-    - targetCorrespondingSourceObject: {fileID: 1162597390366195248, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1952111810}
-    - targetCorrespondingSourceObject: {fileID: 6949408301759135195, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1528201529}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
---- !u!1 &1952111806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1162597390366195248, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-  m_PrefabInstance: {fileID: 1952111805}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1952111807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952111806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ad1c4a98bff45499f2187bfdee0e43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.InputHandler
-  worldCamera: {fileID: 325173385}
---- !u!114 &1952111808 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8065427426807971194, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-  m_PrefabInstance: {fileID: 1952111805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ef6ae6e495d1e48b47c55db61f0cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.ManageMenu
---- !u!114 &1952111809 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3219437194612028366, guid: 95d3d76733d2f9847854df29fd3d3f3c, type: 3}
-  m_PrefabInstance: {fileID: 1952111805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3062841e2867e414abf886b14609994c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.BuildMenu
---- !u!114 &1952111810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952111806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205e44df34f1a4084b3b67488c50f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study.MiniDefence.UIManager
-  buildMenu: {fileID: 1952111809}
-  manageMenu: {fileID: 1952111808}
-  rangeIndicator: {fileID: 1376104980}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
