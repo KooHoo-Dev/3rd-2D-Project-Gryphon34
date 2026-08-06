@@ -1,4 +1,4 @@
 ID	PrefabKey	SpriteKey	MaxHp	Speed	Armor	Resist	KillReward	LeakDamage
-0	Mini Defence/Prefabs/Enemy/Enemy_00	Mini Defence/Prefabs/Enemy/Enemy_00_Thumbnail	100	2	0	0	10	1
+0	Mini Defence/Prefabs/Enemy/Enemy_00	Mini Defence/Prefabs/Enemy/Enemy_00_Thumbnail	40	2	0	0	10	1
 1	Mini Defence/Prefabs/Enemy/Enemy_01	Mini Defence/Prefabs/Enemy/Enemy_01_Thumbnail	60	3.5	0	0	8	1
 2	Mini Defence/Prefabs/Enemy/Enemy_02	Mini Defence/Prefabs/Enemy/Enemy_02_Thumbnail	300	1.2	10	0.2	15	1
