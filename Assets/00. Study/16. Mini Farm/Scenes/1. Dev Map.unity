@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &268092961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268092962}
+  m_Layer: 0
+  m_Name: Farmer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268092962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268092961}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.17459, y: 6.20528, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549013898
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Study.MiniFarm.PathFinder
   mapData: {fileID: 0}
   mapLoader: {fileID: 549013899}
-  startMarker: {fileID: 0}
   goalMarker: {fileID: 0}
+  startMarker: {fileID: 0}
   drawVisited: 1
   drawPath: 1
 --- !u!4 &1958007490
@@ -543,3 +574,4 @@ SceneRoots:
   - {fileID: 628212118}
   - {fileID: 1958007490}
   - {fileID: 549013900}
+  - {fileID: 268092962}
