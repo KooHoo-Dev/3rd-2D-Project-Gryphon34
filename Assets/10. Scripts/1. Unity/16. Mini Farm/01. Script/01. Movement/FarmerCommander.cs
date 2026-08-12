@@ -182,6 +182,8 @@ namespace Study.MiniFarm
         // MoveStepCommand를 동적으로 생성한다.
         public bool MoveTo(Vector3 goal)
         {
+            CancelAll();
+            
             // 웨이포인트를 가져온다 (내 위치, 목적지)
             List<Vector3> waypoints = 
                 pathFinder.FindWaypointsOrNull(transform.position, goal);

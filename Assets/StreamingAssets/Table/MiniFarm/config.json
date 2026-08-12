@@ -1,0 +1,9 @@
+{
+    "TotalDays": 14,
+    "DayLengthSeconds": 15.0,
+    "TimeScales": [0, 1, 2, 3],
+    "StartGold": 100,
+    "GoalGold": 800,
+    "StorageSlots": 12,
+    "HandMaxCount": 3
+}
