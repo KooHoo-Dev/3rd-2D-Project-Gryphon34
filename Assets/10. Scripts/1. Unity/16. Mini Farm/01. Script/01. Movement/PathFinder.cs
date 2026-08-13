@@ -9,6 +9,9 @@ namespace Study.MiniFarm
 {
     public class PathFinder : MonoBehaviour
     {
+        // 나중에 지울거
+        public MapData MapData => mapData;
+        
         // 4방향 계산만 합니다. 8방향은 Astar With PriorityQueue 에서 보세여
         private static readonly Vector2Int[] Directions =
         {

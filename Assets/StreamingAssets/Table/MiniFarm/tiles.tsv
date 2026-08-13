@@ -1,7 +1,7 @@
-TileType	Name	MoveCost	Walkable	Tillable
+TileType	Name	MoveCost	Walkable	Tillable	OverlayKey
 Road	길	1	TRUE	FALSE
 Soil	흙	2	TRUE	TRUE
-Tilled	갈아둔 밭	3	TRUE	FALSE
+Tilled	갈아둔 밭	3	TRUE	FALSE	Mini Farm/Tiles/TilledSoil
 Water	물	0	FALSE	FALSE
 Rock	바위	0	FALSE	FALSE
 Fence	울타리	0	FALSE	FALSE

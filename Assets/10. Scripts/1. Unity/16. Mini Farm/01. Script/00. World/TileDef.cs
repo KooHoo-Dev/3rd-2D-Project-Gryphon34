@@ -31,5 +31,6 @@ namespace Study.MiniFarm
 
         public bool Walkable;
         public bool Tillable;
+        public string OverlayKey;
     }
 }
