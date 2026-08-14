@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using Study.Utilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace Study.MiniFarm
 {
@@ -10,6 +12,9 @@ namespace Study.MiniFarm
         public Farm farm;
 
         private int index = 0;
+
+       
+        
         
         private void Update()
         {
@@ -23,7 +28,7 @@ namespace Study.MiniFarm
             if (SimpleInput.GetKeyDown(Key.E))
             {
                 index++;
-                index = Mathf.Min(1, index);
+                index = Mathf.Min(3, index);
                 Debug.Log($"[FarmTester] index = {index}");
             }
             
@@ -44,7 +49,13 @@ namespace Study.MiniFarm
                     result = farm.Till(clickPosition); 
                     break;
                 case 1 :
-                    result = farm.Sow(clickPosition, 1);
+                    result = farm.Sow(clickPosition, Random.Range(1,5));
+                    break;
+                case 2 :
+                    result = farm.Water(clickPosition);
+                    break;
+                case 3 :
+                    result = farm.Harvest(clickPosition, out Crop crop);
                     break;
                 default:
                     result = FarmResult.UnknownError;

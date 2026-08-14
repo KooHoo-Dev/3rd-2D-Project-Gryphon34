@@ -60,18 +60,22 @@ namespace Study.MiniFarm
     
     public class Farm : MonoBehaviour
     {
-        [Header("References")] 
-        [SerializeField] private PathFinder pathFinder;
-
         [Header("Crops")] 
         [SerializeField] private Crop[] cropPrefabs;
 
         private WorldClock clock;
-        
-        // 아래 두개는 추후 수정
-        private FarmGrid Grid => pathFinder.Grid;
-        private MapData MapData => pathFinder.MapData;
 
+        private MapData MapData { get; set; }
+        private FarmGrid Grid { get; set; }
+
+        // Farm 구동을 위해서는 아래의 두가지 객체가 꼭 필요함\
+        // 초기화시 넣어줄것
+        public void Init(MapData mapData, FarmGrid grid)
+        {
+            MapData = mapData;
+            Grid = grid;
+        }
+        
         # region Unity Method
 
         private void OnEnable()
@@ -152,23 +156,62 @@ namespace Study.MiniFarm
             return FarmResult.Ok;
         }
 
+        public FarmResult Water(Vector3 worldPosition)
+        {
+            Vector2Int coord = Grid.WorldToCell(worldPosition);
+            return Water(coord);
+        }
+        
         // 물을 주는 행동
         public FarmResult Water(Vector2Int coord)
         {
-            Tile tile = Grid.GetTileOrNull(coord);
-            if(tile == null) return FarmResult.WrongTile;
-            if(tile.Type != TileType.Soil) return FarmResult.WrongTile;
-            
-            Transform tileTransform = MapData.GetTileTransformOrNull(coord);
+            // coord 좌표에 crop이 있는지 부터 검색을 한다
+            if(crops.ContainsKey(coord) == false) return FarmResult.NoCrop;
             Crop crop = crops[coord];
-            crop.Water();
             
-            return FarmResult.AlreadyWatered;
+            // 식물이 다 자랐다면 물을 주지 못한다
+            if(crop.IsGrown) return FarmResult.AlreadyGrown;
+            // 오늘 물을 줬으면 물을 더이상 못준다
+            if (crop.WateredToDay) return FarmResult.AlreadyWatered;
+            
+            // 다 통과 했으면? 물을 준다
+            crop.Water();
+            return FarmResult.Ok;
+        }
+
+        public FarmResult Harvest(Vector3 worldPosition, out Crop harvested)
+        {
+            Vector2Int coord = Grid.WorldToCell(worldPosition);
+            return Harvest(coord, out harvested);
         }
         
-        // 다 자란 작물을 거둔다
-        public FarmResult Harvest()
+        // 다 자란 작물을 거둔다. out 키워드를 이용해서 수확한 작물 반환해 준다.
+        // (원래는 : 수확한 작물의 Def만 반환해 준다)
+        public FarmResult Harvest(Vector2Int coord, out Crop harvested)
         {
+            harvested = null;
+            // coord 좌표가 유효한 좌표인지 검증을 한다.
+            if(crops.ContainsKey(coord) == false) return FarmResult.NoCrop;
+            Crop crop = crops[coord];
+
+            // 다 자라지 않았다면 실패처리
+            if (crop.IsGrown == false) return FarmResult.NotGrown;
+            
+            // 이렇게 반환하면 맵 상에 있는 crop 게임오브젝트를 반환하는 꼴이 된다.
+            // harvested = crop;
+
+            // cropPrefabs에서 원본 객체를 찾아서 반환을 해준다
+            // CropDTO -> CropDef -> Crop 구조였다면 CropDef만 반환을 하면 됐지만
+            // 현재는 Crop이 데이터를 들고 있기 때문에 엉성한 구조가 됐다.
+            for (int i = 0; i < cropPrefabs.Length; i++)
+            {
+                if (crop.ID == cropPrefabs[i].ID) 
+                    harvested = cropPrefabs[i];
+            }
+            
+            crops.Remove(coord);        // 딕셔너리에서 제거하고
+            Destroy(crop.gameObject);   // 씬에서 삭제해준다
+            
             return FarmResult.Ok;
         }
         

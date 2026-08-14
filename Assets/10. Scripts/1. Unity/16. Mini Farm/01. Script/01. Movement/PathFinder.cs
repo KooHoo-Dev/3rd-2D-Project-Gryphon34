@@ -9,9 +9,6 @@ namespace Study.MiniFarm
 {
     public class PathFinder : MonoBehaviour
     {
-        // 나중에 지울거
-        public MapData MapData => mapData;
-        
         // 4방향 계산만 합니다. 8방향은 Astar With PriorityQueue 에서 보세여
         private static readonly Vector2Int[] Directions =
         {
@@ -21,38 +18,21 @@ namespace Study.MiniFarm
             Vector2Int.right,
         };
 
-        [Header("Settings")] 
-        [SerializeField] private MapData mapData;
-        [SerializeField] private MapLoader mapLoader;
-        
-        public Transform goalMarker;
-        public Transform startMarker;
-        
         public FarmGrid Grid { get; private set; }
 
         public bool IsReady { get; private set; } = false;
         
-        private async void Start()
+        private void Start()
         {
-            await DataManager.Instance.EnsureLoadedAsync();
-            mapData = mapLoader.LoadOrNull();
-            Grid = mapData.ToGrid(DataManager.Instance.Tiles);
-            Debug.Log($"[PathFinder] 준비 완료. {Grid.Width}, {Grid.Height}");
             IsReady = true;
         }
 
-        private void Update()
-        {
-            if (SimpleInput.GetKeyDown(Key.Space))
-            {
-                Tile start = Grid.GetTileAtWorldOrNull(startMarker.position);
-                Tile goal = Grid.GetTileAtWorldOrNull(goalMarker.position);
-                
-                FindWaypointsOrNull(start.Coord, goal.Coord);
-            }
-        }
-
         # region Public Method
+
+        public void Init(FarmGrid grid)
+        {
+            Grid = grid;
+        }
         
         public Vector2Int WorldToCoord(Vector3 world) => Grid.WorldToCell(world);
         public Vector3 CoordToWorld(Vector2Int coord) => Grid.CellToWorld(coord);

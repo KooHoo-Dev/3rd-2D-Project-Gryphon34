@@ -125,9 +125,8 @@ namespace Study.MiniFarm
     [RequireComponent(typeof(FarmerController))]
     public class FarmerCommander : MonoBehaviour
     {
-        [Header("Ref")] 
-        [SerializeField] private PathFinder pathFinder;
-        [SerializeField] private Camera viewCamera;
+        private PathFinder pathFinder;
+        private Camera viewCamera;
 
         [Header("Settings")] 
         // 임시 스피드 값
@@ -176,6 +175,11 @@ namespace Study.MiniFarm
         }
 
         # region Public Methods
+
+        public void Init(PathFinder pathFinder)
+        {
+            this.pathFinder = pathFinder;
+        }
         
         // 지정한 월드 지점까지 걸어간다.
         // PathFinder를 이용해서 웨이포인트를 가져오고 해당 포인트를 이용해서
