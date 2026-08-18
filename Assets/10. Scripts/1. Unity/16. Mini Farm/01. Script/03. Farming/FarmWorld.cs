@@ -30,6 +30,7 @@ namespace Study.MiniFarm
             BuildWorld();
         }
 
+        // Task로 하는게 더 좋긴함
         private async void BuildWorld()
         {
             await DataManager.Instance.EnsureLoadedAsync();
