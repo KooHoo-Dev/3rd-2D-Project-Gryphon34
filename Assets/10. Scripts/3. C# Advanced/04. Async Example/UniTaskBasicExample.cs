@@ -18,7 +18,7 @@ namespace Study.Async
     // 주요 메서드 (대기)
     // UniTask.Delay(int ms) : 시간 대기. ms만큼 대기합니다.
     // UniTask.Delay(int ms, DelayType type) : type의 유형에 맞춰 대기합니다.
-    // UniTask.WaitForSecondes(float sec) : 초 단위 대기. 코루틴의 WaitForSeconds와 대응됨
+    // UniTask.WaitForSeconds(float sec) : 초 단위 대기. 코루틴의 WaitForSeconds와 대응됨
     // UniTask.DelayFrame(int n) : n 프레임 대기
     // UniTask.Yield(), UniTask.NextFrame() : 한 프레임 대기
     // UniTask.WaitForEndOfFrame : 렌더가 끝날때까지 대기. 코루틴의 WaitForEndOfFrame와 대응됨
@@ -40,8 +40,6 @@ namespace Study.Async
         public int waitValue = 10;
         
         private CancellationToken destroyToken;
-
-      
 
         private void Awake()
         {
@@ -80,13 +78,6 @@ namespace Study.Async
             await UniTask.Delay(Mathf.RoundToInt(waitSeconds * 1000)
                 , DelayType.Realtime 
                 , cancellationToken: destroyToken); 
-            // (매개변수명: 인자) 요거는 여러 매개변수중에 특정 매개변수를
-            // 이름으로 지정해서 넘길 인자를 정해주는 문법입니다.
-            
-            // DeltaTime : 유니티의 Time.timeScale에 영향을 받습니다
-            // UnscaledDeltaTime : timescale 영향을 안받습니다
-            // Realtime : 현실 시계를 기준으로 동작합니다. (앱 포커스에 영향을 받지 않습니다)
-            
             Debug.Log($"[UniTaskBasicExample] DelayGameTimeAsync : 끝!");
         }
 
