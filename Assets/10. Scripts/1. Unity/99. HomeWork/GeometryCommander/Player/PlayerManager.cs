@@ -78,7 +78,8 @@ namespace Geometry
 
         public bool CanAfford(UnitType type)
         {
-            if (type == UnitType.Support) return true;
+            // 지원 폭격은 인구수를 차지하지 않으므로 자원만 검사합니다.
+            if (type == UnitType.Support) return currentCost >= GetCost(type);
             if (currentCost >= GetCost(type) && (maxSupply - currentSupply )>= GetSupply(type)) return true;
 
             return false;

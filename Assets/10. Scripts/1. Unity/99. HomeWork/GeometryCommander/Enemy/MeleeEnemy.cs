@@ -146,11 +146,11 @@ namespace Geometry
                 // 동그라미, 세모만
                 if (type == PlayerManager.UnitType.Triangle)
                 {
-                    addDamage = 2.0f;
+                    addDamage = 0.5f;
                 }
                 else if (type == PlayerManager.UnitType.Circle)
                 {
-                    addDamage = 0.5f;
+                    addDamage = 2.0f;
                 }
             }
             Debug.Log($"{enemyType}이 {type}에게 {damage*addDamage}만큼 공격 받음");

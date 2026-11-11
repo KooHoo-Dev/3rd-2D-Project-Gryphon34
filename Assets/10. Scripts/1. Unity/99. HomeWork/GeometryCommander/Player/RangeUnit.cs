@@ -83,7 +83,10 @@ namespace Geometry
                     yield break;
                 }
 
-                if (Vector3.Distance(targetEnemy.transform.position, this.transform.position) > attackRange)
+                // 탐지(OverlapCircleAll)와 같은 외곽선 기준으로 사거리를 판정합니다.
+                Collider2D targetCol = targetEnemy.GetComponent<Collider2D>();
+                if (targetCol == null ||
+                    Vector3.Distance(transform.position, targetCol.ClosestPoint(transform.position)) > attackRange)
                 {
                     nextStateCoroutine = ScanCoroutine();
                     yield break;

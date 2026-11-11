@@ -148,12 +148,12 @@ namespace Geometry
             }
             else if (myType == PlayerManager.UnitType.Square)
             {
-                // 동그라미, 세모만
-                if (type == EnemyType.Triangle)
+                // 상성 순환: 세모 > 동그라미 > 네모 > 세모
+                if (type == EnemyType.Circle)
                 {
                     addDamage = 2.0f;
                 }
-                else if (type == EnemyType.Circle)
+                else if (type == EnemyType.Triangle)
                 {
                     addDamage = 0.5f;
                 }

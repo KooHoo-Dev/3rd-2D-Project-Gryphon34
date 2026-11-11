@@ -99,6 +99,7 @@ namespace Geometry
             spawnType = PlayerManager.UnitType.Triangle;
 
             if (CheckCondition(spawnType) == false) return;
+            IsSupport = false;
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
@@ -108,6 +109,7 @@ namespace Geometry
             spawnType = PlayerManager.UnitType.Circle;
 
             if (CheckCondition(spawnType) == false) return;
+            IsSupport = false;
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
@@ -117,6 +119,7 @@ namespace Geometry
             spawnType = PlayerManager.UnitType.Square;
 
             if (CheckCondition(spawnType) == false) return;
+            IsSupport = false;
 
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
@@ -125,22 +128,22 @@ namespace Geometry
         public void OnSupportClick()
         {
             spawnType = PlayerManager.UnitType.Support;
-            IsSupport = true;
             // 자원과 쿨타임 체크 로직
             if (CheckCondition(spawnType) == false) return;
 
+            IsSupport = true;
             InitialCommand(spawnType);
             currentState = CommandState.Commanding;
         }
 
         private bool CheckCondition(PlayerManager.UnitType type)
         {
-            if (playerManager.IsOnCooldown(spawnType))
+            if (playerManager.IsOnCooldown(type))
             {
-                Debug.LogWarning($"{spawnType}이 쿨다운 중입니다.");
+                Debug.LogWarning($"{type}이 쿨다운 중입니다.");
                 return false;
             }
-            if (playerManager.CanAfford(spawnType) == false)
+            if (playerManager.CanAfford(type) == false)
             {
                 Debug.LogWarning($"자원이 부족합니다.");
                 return false;
@@ -187,16 +190,12 @@ namespace Geometry
             }
             else
             {
+                // 오입력: 정답 커맨드(commandList)는 유지하고 입력 기록과 화살표 색만 되돌립니다.
+                // commandList까지 비우면 다음 입력에서 commandList[count] 접근이 범위를 벗어납니다.
                 Debug.Log("커맨드 실패");
-                commandList.Clear();
                 InputCommand.Clear();
                 count = 0;
-
-                foreach (Transform child in arrowUI)
-                {
-                    Destroy(child.gameObject);
-                }
-                spawnedArrowImages.Clear();
+                DrawCommad();
             }
         }
 
